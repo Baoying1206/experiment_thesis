@@ -6,7 +6,42 @@
 
 This work investigates the geometry of jailbreak behavior in multilingual large language models (LLMs) through three complementary research questions. Our core contribution is the extraction and analysis of a \textit{jailbreak vector} $\mathbf{j}_l$ — a direction in the model's residual stream that captures the geometric shift between compliant and refusing behavior — derived purely from baseline inference without requiring harmless training data or model retraining. We examine (1) whether this vector is geometrically related to the refusal direction $\mathbf{r}_l$ established in prior work, (2) whether it transfers across languages to enable cross-lingual attacks, and (3) whether subtracting it at inference time constitutes an effective cross-lingual defense.
 
-A central structural distinction in our analysis is between \textit{high-resource languages} (HRL) and \textit{low-resource languages} (LRL). We argue that LRL vulnerability does not arise because jailbreaks defeat an existing alignment mechanism, but rather because no refusal behavior was established in those languages during training. This framing motivates a geometric prediction: for HRL, $\mathbf{j}_l \approx -\mathbf{r}_l$; for LRL, $\mathbf{j}_l \perp \mathbf{r}_l$.
+A central structural distinction in our analysis is between \textit{high-resource languages} (HRL) and \textit{low-resource languages} (LRL). We argue that LRL vulnerability does not arise because jailbreaks defeat an existing alignment mechanism, but rather because no refusal behavior was established in those languages during training. This framing motivates the geometric analysis in RQ1, where we examine whether HRL and LRL languages differ in the alignment between $\mathbf{j}_l$ and $\mathbf{r}_l$.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Research Strategy and Justification}
+\label{sec:strategy}
+
+\subsection{Choice of Research Strategy}
+
+This thesis adopts a \textit{representation engineering} approach to studying multilingual jailbreak behavior. The core research strategy is to extract linear directions from model activations via Difference-in-Means and to test causal claims by injecting or subtracting these directions at inference time. This strategy is chosen for three reasons.
+
+First, it is model-agnostic and does not require access to training data or gradient computation. Because the research questions concern geometry at inference time rather than the training process, activation analysis is a direct and appropriate tool.
+
+Second, the linear representation hypothesis has established empirical support across a range of models and behavioral properties~\citep{zou2023representation, arditi2024refusal}. Applying it to the jailbreak setting is a natural extension with clear theoretical motivation.
+
+Third, inference-time interventions are the only feasible approach for low-resource languages, where fine-tuning-based methods are infeasible due to the absence of safety-labeled data.
+
+\subsection{Alternatives Considered}
+
+\paragraph{Fine-tuning-based methods.}
+Safety fine-tuning on multilingual data is the standard approach to improving LRL safety~\citep{wang2024all}. This was not adopted here because it requires labeled safety data in each target language, which is precisely what is unavailable for LRL languages, and because it changes model weights permanently, preventing comparison with the baseline.
+
+\paragraph{Prompt-based defense.}
+System prompts in English have been shown to partially improve safety in other languages~\citep{wei2023jailbroken}. However, prompt-based methods do not provide access to the model's internal representations, making them unsuitable for the geometric analysis in RQ1. They are also less controllable and harder to interpret than direct activation intervention.
+
+\paragraph{Probing classifiers.}
+Training a linear probe on harmful vs.\ harmless activations is an alternative to DiM for extracting safety-relevant directions. DiM was preferred because it is computationally simpler, does not require training, and has been validated in prior work as producing directions of comparable quality to probe-based methods~\citep{arditi2024refusal}.
+
+\subsection{Ethical Aspects}
+
+This research involves extracting and applying jailbreak vectors — directions in activation space that, when added to model activations, increase the probability of harmful compliance. This raises dual-use concerns.
+
+The primary intended use is defensive. The cross-lingual defense in RQ3 directly applies the extracted directions to reduce harmful compliance in languages where fine-tuning-based alignment is not available. Understanding the mechanism of jailbreak is a necessary prerequisite to designing more robust alignment methods.
+
+To limit misuse risk, this thesis does not release the extracted vectors or model checkpoints. All experiments are conducted on closed test sets. The WildGuard-evaluated outputs are not published. Specific attack coefficients are reported to enable replication under research conditions, but are not optimised for maximal attack effectiveness.
+
+The safety implications of this work are consistent with those of prior research on refusal directions~\citep{arditi2024refusal}, which showed that the same activation-steering technique can be used both to remove and to enhance refusal behavior. In both cases, the scientific contribution to the understanding of safety representations outweighs the marginal increase in risk from publication.
 
 % ─────────────────────────────────────────────────────────────────────────────
 \section{Representation Engineering Background}

@@ -4,7 +4,7 @@
 \chapter{Background}
 \label{chap:background}
 
-This chapter provides a detailed background to the thesis and reviews relevant related work. Section~\ref{sec:align} covers safety alignment in LLMs. Section~\ref{sec:jailbreak} surveys jailbreak attack methods. Section~\ref{sec:multilingual} reviews the multilingual safety literature. Section~\ref{sec:repeng} introduces representation engineering as the methodological foundation. Section~\ref{sec:positioning} positions this work relative to existing research.
+This chapter provides a detailed background to the thesis and reviews relevant related work. Section~\ref{sec:align} covers safety alignment in LLMs. Section~\ref{sec:jailbreak} surveys jailbreak attack methods. Section~\ref{sec:multilingual} reviews the multilingual safety literature. Section~\ref{sec:repeng} introduces representation engineering as the methodological foundation of this thesis.
 
 % -----------------------------------------------------------------------------
 \section{Safety Alignment in Large Language Models}
@@ -67,9 +67,9 @@ Arditi et al.~\citeyearpar{arditi2024refusal} established that a \textit{refusal
 
 Wollschl{\"a}ger et al.~\citeyearpar{wollschlager2025geometry} study the geometry of refusal representations in detail, introducing the concept of ``refusal cones'' — regions of activation space associated with refusal — and showing that refusal representations are more complex than a single direction. Marshall et al.~\citeyearpar{marshall2024refusal} show that the refusal function is better described as an affine function than a linear one, and that the bias term accounts for a non-trivial portion of refusal behavior. These findings suggest that while a single direction captures most of the variance in refusal behavior, it is not the complete picture.
 
-Zhao et al.~\citeyearpar{zhao2026llms} provide the most directly relevant finding for our H1: they show that LLMs encode \textit{harmfulness} and \textit{refusal} in separable directions in activation space. This means that the jailbreak vector $\mathbf{j}_l$ — which captures the difference between complying and refusing in response to harmful inputs — need not be identical to the negation of the refusal direction $\mathbf{r}_l$, supporting the theoretical possibility of $\mathbf{j}_l \perp \mathbf{r}_l$ in LRL settings.
+Zhao et al.~\citeyearpar{zhao2026llms} provide the most directly relevant motivation for RQ1: they show that LLMs encode \textit{harmfulness} and \textit{refusal} in separable directions in activation space. This finding suggests that the jailbreak direction need not simply be the negation of the refusal direction, motivating our investigation of their geometric relationship across languages.
 
 \subsection{Vector-based Defense and Attack}
 
-Wang et al.~\citeyearpar{wang2025surgical} show that ablating the refusal direction via single-vector intervention reduces false refusals on benign inputs, demonstrating that refusal direction surgery can be applied with surgical precision. Piras et al.~\citeyearpar{piras2026som} extend this to multi-directional suppression, showing that using multiple refusal directions improves the robustness of vector-based attacks. These works establish the effectiveness and versatility of activation-steering for safety control. Our defense experiments (H3) adopt the same intervention mechanism but apply it in the cross-lingual setting.
+Wang et al.~\citeyearpar{wang2025surgical} show that ablating the refusal direction via single-vector intervention reduces false refusals on benign inputs, demonstrating that refusal direction surgery can be applied with surgical precision. Piras et al.~\citeyearpar{piras2026som} extend this to multi-directional suppression, showing that using multiple refusal directions improves the robustness of vector-based attacks. These works establish the effectiveness and versatility of activation-steering for safety control. Our defense experiments addressing RQ3 adopt the same intervention mechanism but apply it in the cross-lingual setting.
 

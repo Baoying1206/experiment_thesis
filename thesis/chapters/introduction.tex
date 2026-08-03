@@ -12,27 +12,29 @@ Safety-aligned large language models (LLMs) are designed to refuse harmful reque
 
 The cause of this vulnerability is well understood at a high level: safety alignment relies on human feedback data, and such data is overwhelmingly English-centric~\citep{ouyang2022training, krasnodkebska2026safety}. As a result, models develop strong refusal behaviors in English and high-resource languages, but weak or absent refusal behaviors in low-resource languages. Yong et al.~\citeyearpar{yong2023low} showed that translating harmful prompts into Zulu or Hmong was sufficient to bypass GPT-4's safety filters. Deng et al.~\citeyearpar{deng2024multilingual} confirmed this pattern across 54 languages, showing that bypass rates increase consistently as language resource level decreases.
 
-What remains less understood is the internal mechanism behind this vulnerability. Two different explanations are possible. In high-resource languages, jailbreaking may work by actively suppressing the model's established refusal behavior. In low-resource languages, the model may simply never have developed a refusal behavior in those languages. These two cases call for different solutions, yet existing research has not distinguished between them at the representation level.
+This thesis contributes to the intersection of natural language processing and AI safety, specifically to the area of multilingual safety in large language models. It examines the multilingual jailbreak vulnerability from a representation engineering perspective, studying the internal activation geometry that underlies jailbreak behavior across languages.
 
 % -----------------------------------------------------------------------------
 \section{Problem}
 \label{sec:problem}
 
-Recent work on representation engineering has shown that refusal behavior in LLMs can be characterised as a linear direction in the model's internal activation space~\citep{arditi2024refusal}. This \textit{refusal direction} $\mathbf{r}_l$ can be extracted using the Difference-in-Means method and used to steer model behavior at inference time. Wang et al.~\citeyearpar{wang2026refusal} showed that this direction is geometrically consistent across safety-aligned languages, suggesting a shared internal mechanism for refusal across high-resource languages.
+What remains less understood is the internal mechanism behind the multilingual jailbreak vulnerability. Two explanations have been proposed. In high-resource languages (HRL), jailbreaking may work by actively suppressing the model's established refusal behavior. In low-resource languages (LRL), the model may never have developed a refusal behavior to begin with. These two cases call for different solutions, yet existing research has not distinguished between them at the representation level.
 
-However, three problems remain unaddressed in the existing literature.
+Recent work has shown that refusal behavior can be characterised as a linear direction $\mathbf{r}_l$ in the model's activation space~\citep{arditi2024refusal}, and that this direction is geometrically consistent across safety-aligned high-resource languages~\citep{wang2026refusal}. However, three problems remain unaddressed.
 
-\textbf{First}, it is not known whether jailbreak behavior can be analogously characterised as a direction $\mathbf{j}_l$ in activation space, and whether the relationship between $\mathbf{j}_l$ and $\mathbf{r}_l$ differs between high-resource and low-resource languages. If jailbreaking works by suppressing refusal, then $\mathbf{j}_l$ should be anti-parallel to $\mathbf{r}_l$. If low-resource languages lack refusal alignment entirely, then $\mathbf{j}_l$ should be geometrically unrelated to $\mathbf{r}_l$.
+\textbf{First}, it is not known whether jailbreak behavior can analogously be characterised as a direction $\mathbf{j}_l$, or whether the geometric relationship between $\mathbf{j}_l$ and $\mathbf{r}_l$ differs between HRL and LRL languages. If jailbreak behavior reflects suppression of refusal, one possible expectation is that $\mathbf{j}_l$ and $\mathbf{r}_l$ may be anti-parallel in HRL languages. For LRL languages, where refusal alignment may be absent, the relationship between these directions may be qualitatively different.
 
-\textbf{Second}, it is not known whether jailbreak vectors transfer across languages. If the geometric structure of $\mathbf{j}_l$ is shared across languages, then injecting a source-language jailbreak vector into a target language should increase bypass rates. This has not been tested.
+\textbf{Second}, it is not known whether jailbreak vectors transfer across languages. If the geometric structure of $\mathbf{j}_l$ is shared, injecting a source-language jailbreak vector into a target language may affect bypass rates. This has not been empirically tested.
 
-\textbf{Third}, no inference-time defense exists for low-resource languages that lack sufficient training data for safety fine-tuning. If a high-resource jailbreak vector can be subtracted from low-resource activations to restore refusal, this would provide a training-free alignment method for data-scarce language settings.
+\textbf{Third}, no inference-time defense exists for low-resource languages that lack sufficient data for safety fine-tuning. Whether subtracting a high-resource jailbreak vector from low-resource activations can provide a training-free alignment signal remains open.
+
+These problems are both theoretical and practical in nature. Theoretically, they concern the internal geometry of safety representations in multilingual models. Practically, answering them could inform the design of inference-time safety interventions for languages where fine-tuning-based approaches are infeasible.
 
 % -----------------------------------------------------------------------------
 \section{Research Questions}
 \label{sec:rq}
 
-This thesis addresses three research questions.
+This thesis addresses three research questions, each corresponding to one of the problems identified above.
 
 \begin{description}
     \item[\textbf{RQ1}] Is the jailbreak vector $\mathbf{j}_l$ geometrically related to the refusal direction $\mathbf{r}_l$, and does this relationship differ between high-resource and low-resource languages?
@@ -42,17 +44,17 @@ This thesis addresses three research questions.
     \item[\textbf{RQ3}] Can subtracting a source-language jailbreak vector from target-language activations reduce compliance rates, including in low-resource languages where same-language defense is not available?
 \end{description}
 
-% -----------------------------------------------------------------------------
-\section{Expected Observations}
-\label{sec:expected}
+Answering RQ1 clarifies the mechanism of multilingual jailbreak vulnerability. Answering RQ2 and RQ3 tests whether this mechanism can be exploited and countered across linguistic boundaries, with practical implications for low-resource language safety.
 
-Based on the research questions above and prior findings in representation engineering~\citep{arditi2024refusal, wang2026refusal}, the following observations are anticipated.
+\subsection*{Research Expectations}
+
+Based on prior findings in representation engineering~\citep{arditi2024refusal, wang2026refusal}, the following outcomes are anticipated, though not assumed.
 
 For RQ1, HRL languages may exhibit stronger anti-parallel alignment between $\mathbf{j}_l$ and $\mathbf{r}_l$ than LRL languages. LRL languages may show weaker or qualitatively different geometric relationships, reflecting an absence of safety alignment rather than its suppression.
 
 For RQ2, if jailbreak vectors capture language-independent safety representations, we expect partial cross-lingual transfer, with bypass rates increasing in the target language when a source jailbreak vector is injected. Transfer may be more consistent in HRL-to-HRL settings than across the HRL-LRL boundary.
 
-For RQ3, if the transferred vectors encode safety-relevant geometry, subtracting them may reduce harmful compliance in the target language. This effect may be weaker for LRL targets, where the underlying mechanism of compliance differs from that in aligned languages.
+For RQ3, if the transferred vectors encode safety-relevant geometry, subtracting them may reduce harmful compliance in the target language. This effect may be weaker for LRL targets, where the underlying mechanism of compliance may differ from that in aligned languages.
 
 % -----------------------------------------------------------------------------
 \section{Delimitations}
@@ -73,25 +75,7 @@ The scope of this thesis is bounded by the following delimitations.
 \end{itemize}
 
 % -----------------------------------------------------------------------------
-\section{Contributions}
-\label{sec:contributions}
-
-This thesis makes the following contributions.
-
-\begin{enumerate}
-    \item A method for extracting a per-language jailbreak vector $\mathbf{j}_l$ from baseline inference without harmless training data, applicable to language settings where such data is unavailable.
-
-    \item Geometric evidence distinguishing two mechanistically different causes of multilingual jailbreak vulnerability: refusal suppression in high-resource languages versus alignment absence in low-resource languages.
-
-    \item Empirical results showing that jailbreak vectors transfer across languages, enabling source-language vectors to increase bypass rates in target languages.
-
-    \item An inference-time cross-lingual defense that reduces harmful compliance in low-resource languages by subtracting a high-resource jailbreak vector, requiring no additional training data.
-
-    \item An extended version of the PolyRefuse dataset~\citep{wang2026refusal} covering 16 languages, including Swahili and Amharic as new low-resource additions.
-\end{enumerate}
-
-% -----------------------------------------------------------------------------
 \section{Thesis Structure}
 \label{sec:structure}
 
-This thesis follows the Testing a Hypothesis structure. \textbf{Part II} (Chapter~\ref{chap:background}) provides an extended background on multilingual jailbreak, representation engineering, and related work. \textbf{Part III} (Chapter~\ref{chap:methodology}) describes the methodology, including vector extraction, experimental design, and research strategy justification. \textbf{Part IV} (Chapter~\ref{chap:results}) reports results for H1, H2, and H3. \textbf{Part V} (Chapter~\ref{chap:discussion}) discusses findings, limitations, and directions for future work.
+This thesis follows an empirical research design centred on three research questions. \textbf{Chapter~\ref{chap:background}} provides an extended background on multilingual jailbreak, representation engineering, and related work. \textbf{Chapter~\ref{chap:methodology}} describes the research strategy, vector extraction method, and the empirical investigation for each research question. \textbf{Chapter~\ref{chap:results}} reports the results addressing RQ1, RQ2, and RQ3. \textbf{Chapter~\ref{chap:discussion}} reflects on the findings, discusses limitations, and suggests directions for future work.
