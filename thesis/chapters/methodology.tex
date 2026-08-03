@@ -104,8 +104,8 @@ We additionally compute the pairwise cosine similarity between jailbreak vectors
     \label{eq:cross_sim}
 \end{equation}
 
-\paragraph{Expected Observations.}
-For HRL languages, jailbreaking should correspond to suppressing the refusal direction, yielding $\cos(\hat{\mathbf{j}}_l, \hat{\mathbf{r}}_l) \approx -1$. For LRL languages, where no refusal direction has been established during training, the jailbreak vector is expected to be geometrically unrelated to $\mathbf{r}_l$, predicting $\cos(\hat{\mathbf{j}}_l, \hat{\mathbf{r}}_l) \approx 0$. High values of $S_{ij}$ across language pairs would indicate a shared geometric structure of jailbreak behavior, providing motivation for the transfer experiments in RQ2 and RQ3.
+\paragraph{Expected Observations for RQ1.}
+HRL languages may exhibit stronger anti-parallel alignment between $\mathbf{j}_l$ and $\mathbf{r}_l$, reflected in $\cos(\hat{\mathbf{j}}_l, \hat{\mathbf{r}}_l) \approx -1$. LRL languages may exhibit weaker or qualitatively different geometric relationships, with cosine similarity values closer to zero. If jailbreak vectors share a consistent direction across languages, pairwise similarities $S_{ij}$ may be uniformly high; if HRL and LRL languages differ mechanistically, a cluster structure may emerge.
 
 % ─────────────────────────────────────────────────────────────────────────────
 \section{RQ2: Cross-lingual Jailbreak Attack Transfer}
@@ -131,8 +131,8 @@ The primary metric is the bypass rate increase:
 %
 We evaluate three transfer directions: HRL to HRL (positive control), LRL to HRL (testing whether LRL vectors that are orthogonal to $\mathbf{r}$ can still induce bypass), and HRL to LRL (testing whether HRL vectors further increase already-high LRL bypass rates). The injection coefficient is set to $\alpha = 20$ for Qwen2.5-7B-Instruct and Llama-3.1-8B-Instruct, and $\alpha = 5$ for Gemma-2-9B-IT to avoid degenerate generation.
 
-\paragraph{Expected Observations.}
-If jailbreak vectors share a cross-lingual geometric structure, HRL-to-HRL transfer should increase bypass rates above baseline. If LRL vectors can also transfer despite being orthogonal to $\mathbf{r}_l$, this suggests that attack efficacy does not depend on the suppression of an existing refusal direction. A null result in LRL-to-HRL transfer would support the view that only aligned languages share a common jailbreak mechanism.
+\paragraph{Expected Observations for RQ2.}
+If jailbreak vectors capture language-independent safety representations, we expect partial transfer across languages, with bypass rates in the target language increasing above baseline when a source vector is injected. Transfer may be stronger in HRL-to-HRL conditions, where both languages share aligned safety training, than in LRL-to-HRL or HRL-to-LRL conditions. A negative result would suggest that jailbreak vectors are language-specific and do not generalise across linguistic boundaries.
 
 % ─────────────────────────────────────────────────────────────────────────────
 \section{RQ3: Cross-lingual Defense via Jailbreak Vector Subtraction}
@@ -151,8 +151,8 @@ The defense intervention subtracts the source jailbreak direction from residual 
 %
 Inputs are drawn from the bypassed subset $\mathcal{B}_t$ (baseline compliance = 100\%). The metric is the compliance rate after intervention: the fraction of defended completions where the model still complies. A lower value indicates more effective defense. Results are reported as a compliance rate matrix $C \in [0,1]^{|T| \times |S|}$, where $C_{t,s}$ is the post-intervention compliance rate for target language $t$ using source vector $\hat{\mathbf{j}}_s$. Two conditions are evaluated: self-defense ($s = t$, replicating the single-language setting of~\citet{arditi2024refusal}) and cross-lingual defense ($s \neq t$, the novel contribution of this work).
 
-\paragraph{Expected Observations.}
-Self-defense should reduce compliance rates in HRL languages, consistent with prior findings~\citep{arditi2024refusal}. For LRL languages, where $\mathbf{j}_l$ cannot be extracted due to near-100\% bypass rates, only cross-lingual defense is applicable. If subtracting an HRL jailbreak vector reduces compliance in an LRL target, this constitutes inference-time alignment injection: a training-free method to introduce refusal behavior into a language that was never safety-tuned. A null result would indicate that cross-lingual defense does not generalise to settings where the target language lacks alignment.
+\paragraph{Expected Observations for RQ3.}
+Self-defense may reduce compliance rates in HRL languages, consistent with prior findings~\citep{arditi2024refusal}. If the transferred jailbreak vectors encode safety-relevant geometry that is shared across languages, subtracting them may reduce harmful compliance in the target language. For LRL languages, where same-language defense is not available, a cross-lingual defense signal may still partially suppress compliance if the HRL jailbreak direction captures a broader notion of safety-relevant activation. However, if LRL vulnerability stems from a fundamentally different mechanism, cross-lingual defense may have limited effect.
 
 % ─────────────────────────────────────────────────────────────────────────────
 \section{Language Resource Classification}

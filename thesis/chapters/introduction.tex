@@ -43,6 +43,18 @@ This thesis addresses three research questions.
 \end{description}
 
 % -----------------------------------------------------------------------------
+\section{Expected Observations}
+\label{sec:expected}
+
+Based on the research questions above and prior findings in representation engineering~\citep{arditi2024refusal, wang2026refusal}, the following observations are anticipated.
+
+For RQ1, HRL languages may exhibit stronger anti-parallel alignment between $\mathbf{j}_l$ and $\mathbf{r}_l$ than LRL languages. LRL languages may show weaker or qualitatively different geometric relationships, reflecting an absence of safety alignment rather than its suppression.
+
+For RQ2, if jailbreak vectors capture language-independent safety representations, we expect partial cross-lingual transfer, with bypass rates increasing in the target language when a source jailbreak vector is injected. Transfer may be more consistent in HRL-to-HRL settings than across the HRL-LRL boundary.
+
+For RQ3, if the transferred vectors encode safety-relevant geometry, subtracting them may reduce harmful compliance in the target language. This effect may be weaker for LRL targets, where the underlying mechanism of compliance differs from that in aligned languages.
+
+% -----------------------------------------------------------------------------
 \section{Delimitations}
 \label{sec:delimitations}
 
