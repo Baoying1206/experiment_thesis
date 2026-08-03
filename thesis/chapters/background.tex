@@ -77,28 +77,4 @@ Wang et al.~\citeyearpar{wang2025surgical} show that ablating the refusal direct
 \section{Positioning}
 \label{sec:positioning}
 
-Table~\ref{tab:related_work} summarises how this thesis relates to the most directly relevant prior work across five dimensions: multilingual evaluation, low-resource language inclusion, jailbreak-specific vector extraction, mechanistic geometric analysis, cross-lingual transfer, and defense.
-
-\begin{table}[h]
-\centering
-\caption{Positioning relative to related work. \checkmark~= addressed; $\circ$~= partially addressed; --~= not addressed.}
-\label{tab:related_work}
-\setlength{\tabcolsep}{4pt}
-\begin{tabular}{lcccccc}
-\toprule
-\textbf{Work} & \textbf{Multilingual} & \textbf{LRL} & \textbf{JB vector} & \textbf{Mechanism} & \textbf{Cross-lingual} & \textbf{Defense} \\
-\midrule
-Arditi et al.~\citeyearpar{arditi2024refusal}       & $\circ$    & --         & --         & \checkmark & --         & \checkmark \\
-Wang et al.~\citeyearpar{wang2026refusal}            & \checkmark & --         & --         & \checkmark & --         & --         \\
-Yong et al.~\citeyearpar{yong2023low}                & \checkmark & \checkmark & --         & --         & --         & --         \\
-Deng et al.~\citeyearpar{deng2024multilingual}       & \checkmark & \checkmark & --         & --         & --         & --         \\
-Aziz et al.~\citeyearpar{aziz2026low}                & \checkmark & \checkmark & --         & \checkmark & --         & --         \\
-Atil et al.~\citeyearpar{atil2025methods}            & \checkmark & $\circ$    & --         & --         & \checkmark & \checkmark \\
-Zhao et al.~\citeyearpar{zhao2026llms}               & --         & --         & $\circ$    & \checkmark & --         & --         \\
-\midrule
-\textbf{This thesis}                                 & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-The key novelty of this thesis is the combination of: (a) a jailbreak vector $\mathbf{j}_l$ extracted purely from inference behavior without harmless data, (b) geometric analysis of this vector across HRL and LRL languages, and (c) explicit cross-lingual transfer experiments for both attack and defense. No prior work addresses all three simultaneously.
+Prior work has documented the multilingual safety gap empirically and studied refusal representations in high-resource languages, but no existing study combines all three of the following: a jailbreak-specific vector extracted from inference behavior, geometric analysis across both high-resource and low-resource languages, and explicit cross-lingual transfer experiments for attack and defense. This thesis addresses all three together.
