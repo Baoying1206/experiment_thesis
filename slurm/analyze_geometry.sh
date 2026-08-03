@@ -4,11 +4,11 @@
 #SBATCH --account=slurm-students
 #SBATCH --output=slurm/logs/geometry_%j.out
 
-cd ~/thesis_experiment/Multilingual-Refusal
+cd ~/experiment_thesis
 echo "Start: $(date)"
 
 source ~/thesis_experiment/Multilingual-Refusal/venv/bin/activate
-export PYTHONPATH=/home/h24/baga0553/thesis_experiment/Multilingual-Refusal:$PYTHONPATH
+export PYTHONPATH=/home/h24/baga0553/thesis_experiment/Multilingual-Refusal:/home/h24/baga0553/experiment_thesis:$PYTHONPATH
 
 python scripts/analyze_geometry.py \
     --results_dir  output/jailbreak_analysis \

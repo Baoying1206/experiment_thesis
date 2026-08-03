@@ -24,10 +24,10 @@ MODEL_ALIAS=${MODEL_ALIASES[$MODEL_IDX]}
 
 echo "Model: $MODEL_ALIAS  Start: $(date)"
 
-cd ~/thesis_experiment/Multilingual-Refusal
+cd ~/experiment_thesis
 mkdir -p slurm/logs
-source venv/bin/activate
-export PYTHONPATH=/home/h24/baga0553/thesis_experiment/Multilingual-Refusal:$PYTHONPATH
+source ~/thesis_experiment/Multilingual-Refusal/venv/bin/activate
+export PYTHONPATH=/home/h24/baga0553/thesis_experiment/Multilingual-Refusal:/home/h24/baga0553/experiment_thesis:$PYTHONPATH
 
 python scripts/extract_jailbreak_vectors.py \
     --model_path   "$MODEL_PATH" \
