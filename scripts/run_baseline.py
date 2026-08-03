@@ -28,8 +28,63 @@ import torch
 from tqdm import tqdm
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-from dataset.load_dataset import load_dataset_split
 from pipeline.model_utils.model_factory import construct_model_base
+
+
+# ── Patch: handle languages absent from REFUSAL_TOKENS_LANG ──────────────────
+# The original pipeline only defined refusal tokens for the 8 base languages.
+# For any new language we fall back to English tokens; we use WildGuard anyway.
+def _patch_refusal_toks():
+    for mod_name, cls_name in [
+        ('pipeline.model_utils.qwen2_model', 'Qwen2Model'),
+        ('pipeline.model_utils.llama_model', 'LlamaModel'),
+        ('pipeline.model_utils.gemma_model', 'GemmaModel'),
+        ('pipeline.model_utils.gemma2_model', 'Gemma2Model'),
+    ]:
+        try:
+            import importlib
+            mod = importlib.import_module(mod_name)
+            cls = getattr(mod, cls_name, None)
+            if cls is None:
+                continue
+            orig = cls._get_refusal_toks
+            def _safe(self, lang, _orig=orig):
+                try:
+                    return _orig(self, lang)
+                except KeyError:
+                    try:
+                        return _orig(self, 'en')
+                    except Exception:
+                        return []
+            cls._get_refusal_toks = _safe
+        except Exception:
+            pass
+
+_patch_refusal_toks()
+
+
+# ── Dataset loading with fallback to ployrefuse_Enhanced ─────────────────────
+_ENHANCED_DIR = os.path.expanduser('~/experiment_thesis/ployrefuse_Enhanced')
+
+
+def load_dataset_split(split_type, split, lang):
+    from dataset.load_dataset import load_dataset_split as _orig
+    try:
+        return _orig(split_type, split, lang=lang)
+    except (FileNotFoundError, KeyError):
+        fname = f'{split_type}_{split}_translated_{lang}.json'
+        fpath = os.path.join(_ENHANCED_DIR, fname)
+        with open(fpath, 'r') as f:
+            items = json.load(f)
+        result = []
+        for item in items:
+            translated = item.get('instruction_translated', item['instruction'])
+            result.append({
+                'instruction': translated,
+                'instruction_en': item['instruction'],
+                'category': item.get('category', ''),
+            })
+        return result
 
 
 # ── WildGuard ─────────────────────────────────────────────────────────────────
