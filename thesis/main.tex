@@ -1,0 +1,88 @@
+\documentclass[12pt, a4paper]{report}
+
+% ── Encoding & fonts ──────────────────────────────────────────────────────────
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+% ── Page layout ───────────────────────────────────────────────────────────────
+\usepackage[a4paper, top=2.5cm, bottom=2.5cm, left=3cm, right=2.5cm]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+
+% ── Math ──────────────────────────────────────────────────────────────────────
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{bm}
+
+% ── Tables & figures ──────────────────────────────────────────────────────────
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage[table]{xcolor}
+\usepackage{colortbl}
+
+% ── Hyperlinks ────────────────────────────────────────────────────────────────
+\usepackage[hidelinks]{hyperref}
+
+% ── Bibliography ──────────────────────────────────────────────────────────────
+\usepackage[numbers, sort&compress]{natbib}
+\bibliographystyle{plainnat}
+
+% ── Misc ──────────────────────────────────────────────────────────────────────
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+% ── Custom commands ───────────────────────────────────────────────────────────
+\newcommand{\jl}{\mathbf{j}_l}
+\newcommand{\rl}{\mathbf{r}_l}
+\newcommand{\hk}{\mathbf{h}^{(k)}}
+\newcommand{\RQ}[1]{\textbf{RQ#1}}
+
+% ── Title info ────────────────────────────────────────────────────────────────
+\title{
+    \vspace{-1cm}
+    {\Large Master's Thesis} \\[0.5cm]
+    {\LARGE \textbf{Cross-lingual Jailbreak Vectors: \\
+    Geometry, Transfer, and Inference-time Defense \\
+    in Multilingual Language Models}} \\[1cm]
+    {\large Submitted in partial fulfilment of the requirements \\
+    for the degree of Master of Science}
+}
+\author{Baoying Gao \\ \small Matr. Nr.: baga0553}
+\date{\today}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+\newpage
+
+% ── Abstract ─────────────────────────────────────────────────────────────────
+\begin{abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+% TODO
+\end{abstract}
+\newpage
+
+% ── Table of contents ────────────────────────────────────────────────────────
+\tableofcontents
+\newpage
+
+% ── Chapters ─────────────────────────────────────────────────────────────────
+\input{chapters/introduction}
+\input{chapters/related_work}
+\input{chapters/methodology}
+\input{chapters/experiments}
+\input{chapters/results}
+\input{chapters/discussion}
+\input{chapters/conclusion}
+
+% ── Bibliography ─────────────────────────────────────────────────────────────
+\bibliography{references}
+
+\end{document}

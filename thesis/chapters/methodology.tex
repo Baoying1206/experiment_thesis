@@ -1,0 +1,211 @@
+\chapter{Methodology}
+\label{chap:methodology}
+
+\section{Overview}
+\label{sec:overview}
+
+This work investigates the geometry of jailbreak behavior in multilingual large language models (LLMs) through three complementary research questions. Our core contribution is the extraction and analysis of a \textit{jailbreak vector} $\mathbf{j}_l$ — a direction in the model's residual stream that captures the geometric shift between compliant and refusing behavior — derived purely from baseline inference without requiring harmless training data or model retraining. We examine (1) whether this vector is geometrically related to the refusal direction $\mathbf{r}_l$ established in prior work, (2) whether it transfers across languages to enable cross-lingual attacks, and (3) whether subtracting it at inference time constitutes an effective cross-lingual defense.
+
+A central structural distinction in our analysis is between \textit{high-resource languages} (HRL) and \textit{low-resource languages} (LRL). We argue that LRL vulnerability does not arise because jailbreaks defeat an existing alignment mechanism, but rather because no refusal behavior was established in those languages during training. This framing motivates a geometric prediction: for HRL, $\mathbf{j}_l \approx -\mathbf{r}_l$; for LRL, $\mathbf{j}_l \perp \mathbf{r}_l$.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Representation Engineering Background}
+\label{sec:repeng}
+
+We build on the \textit{linear representation hypothesis}, which posits that high-level semantic properties of text are encoded as directions in a model's residual stream~\citep{zou2023representation}. Prior work has demonstrated that safety-relevant behaviors such as refusal can be captured by linear directions computed via the Difference-in-Means (DiM) method, and that injecting or subtracting these directions from intermediate activations at inference time is sufficient to steer model behavior without any retraining~\citep{arditi2024refusal}.
+
+Formally, let $\mathbf{h}^{(k)} \in \mathbb{R}^d$ denote the residual stream activation at layer $k$ at the last token position. An activation steering intervention at layer $k^*$ takes the form:
+%
+\begin{equation}
+    \mathbf{h}'^{(k^*)} = \mathbf{h}^{(k^*)} + \alpha \cdot \hat{\mathbf{v}}^{(k^*)}
+    \label{eq:intervention}
+\end{equation}
+%
+where $\hat{\mathbf{v}}$ is a unit-normalised direction vector and $\alpha \in \mathbb{R}$ is a scalar coefficient. A positive $\alpha$ steers activations toward $\hat{\mathbf{v}}$; a negative $\alpha$ steers away from it.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Vector Extraction via Difference-in-Means}
+\label{sec:vectors}
+
+\subsection{Jailbreak Vector \texorpdfstring{$\mathbf{j}_l$}{j\_l}}
+\label{sec:jl}
+
+For each language $l$, we partition the baseline harmful test completions into two groups based on WildGuard~\citep{wildguard} evaluation:
+%
+\begin{itemize}[noitemsep]
+    \item $\mathcal{B}_l$: \textit{bypassed} samples, where the model complied with the harmful request (\texttt{refusal\,=\,0})
+    \item $\mathcal{R}_l$: \textit{refused} samples, where the model refused (\texttt{refusal\,=\,1})
+\end{itemize}
+%
+The jailbreak vector is defined as the Difference-in-Means between the mean activations of these two groups:
+%
+\begin{equation}
+    \mathbf{j}_l^{(k)} =
+        \frac{1}{|\mathcal{B}_l|} \sum_{x \in \mathcal{B}_l} \mathbf{h}_x^{(k)}
+        \;-\;
+        \frac{1}{|\mathcal{R}_l|} \sum_{x \in \mathcal{R}_l} \mathbf{h}_x^{(k)}
+    \label{eq:jl}
+\end{equation}
+%
+where $\mathbf{h}_x^{(k)}$ is the last-token activation of input $x$ at layer $k$. Geometrically, $\mathbf{j}_l^{(k)}$ points from the \textit{refusing} cluster toward the \textit{complying} cluster in activation space.
+
+Extraction requires a minimum of 20 samples in each group ($|\mathcal{B}_l| \geq 20$, $|\mathcal{R}_l| \geq 20$). For LRL languages where bypass rates approach 100\%, the refused group may fall below this threshold, making $\mathbf{j}_l$ unextractable — a finding that itself serves as evidence that no refusal mechanism exists in those languages.
+
+Crucially, $\mathbf{j}_l$ requires only baseline harmful completions and WildGuard labels. It does not depend on harmless data, making it suitable for analysis of languages where harmless corpora are unavailable.
+
+\subsection{Refusal Direction \texorpdfstring{$\mathbf{r}_l$}{r\_l}}
+\label{sec:rl}
+
+Following~\citet{arditi2024refusal}, the refusal direction is extracted as the Difference-in-Means between harmful and harmless training prompts:
+%
+\begin{equation}
+    \mathbf{r}_l^{(k)} =
+        \frac{1}{N} \sum_{x \in \mathcal{H}_l} \mathbf{h}_x^{(k)}
+        \;-\;
+        \frac{1}{N} \sum_{x \in \mathcal{S}_l} \mathbf{h}_x^{(k)}
+    \label{eq:rl}
+\end{equation}
+%
+where $\mathcal{H}_l$ denotes harmful training prompts and $\mathcal{S}_l$ denotes harmless training prompts in language $l$, with $N = 128$. This vector serves as the reference direction in RQ1.
+
+\subsection{Intervention Layer Selection \texorpdfstring{($k^*$)}{(k*)}}
+\label{sec:kstar}
+
+All attack and defense interventions are applied at a single layer $k^*$ selected per model as the layer at which the jailbreak and refusal directions are most anti-parallel:
+%
+\begin{equation}
+    k^* = \arg\min_k \;\cos\!\left(\mathbf{j}_l^{(k)},\; \mathbf{r}_l^{(k)}\right)
+    \label{eq:kstar}
+\end{equation}
+%
+This corresponds to the layer where the jailbreak and refusal directions are most strongly opposed, and where steering interventions have been empirically shown to be most effective~\citep{arditi2024refusal}. The value of $k^*$ is computed once per model from the geometry analysis and reused across all subsequent experiments.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{RQ1: Geometric Relationship between \texorpdfstring{$\mathbf{j}_l$}{j\_l} and \texorpdfstring{$\mathbf{r}_l$}{r\_l}}
+\label{sec:rq1}
+
+\textbf{Research Question 1:} \textit{Is the jailbreak vector anti-parallel to the refusal direction, and does this relationship differ between high-resource and low-resource languages?}
+
+\medskip
+For each language $l$ and layer $k$, we compute the cosine similarity between the unit-normalised jailbreak and refusal directions:
+%
+\begin{equation}
+    \cos\!\left(\hat{\mathbf{j}}_l^{(k)},\; \hat{\mathbf{r}}_l^{(k)}\right)
+    = \frac{\mathbf{j}_l^{(k)} \cdot \mathbf{r}_l^{(k)}}
+           {\|\mathbf{j}_l^{(k)}\|\;\|\mathbf{r}_l^{(k)}\|}
+    \label{eq:cos_jl_rl}
+\end{equation}
+
+We make two predictions. For HRL, safety training establishes a strong refusal direction; jailbreaking should correspond to suppressing it, yielding $\cos(\hat{\mathbf{j}}_l, \hat{\mathbf{r}}_l) \approx -1$. For LRL, where no refusal direction has been established, the jailbreak vector captures a different phenomenon (unconditional compliance rather than suppressed refusal), predicting $\cos(\hat{\mathbf{j}}_l, \hat{\mathbf{r}}_l) \approx 0$.
+
+We additionally compute the pairwise cosine similarity between jailbreak vectors across all language pairs:
+%
+\begin{equation}
+    S_{ij}^{(k)} = \cos\!\left(\hat{\mathbf{j}}_i^{(k)},\; \hat{\mathbf{j}}_j^{(k)}\right)
+    \label{eq:cross_sim}
+\end{equation}
+%
+High values of $S_{ij}$ indicate that the geometric structure of jailbreak behavior is shared across languages $i$ and $j$, providing motivation for the cross-lingual transfer experiments in RQ2 and RQ3.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{RQ2: Cross-lingual Jailbreak Attack Transfer}
+\label{sec:rq2}
+
+\textbf{Research Question 2:} \textit{Can injecting a source language's jailbreak vector $\mathbf{j}_\mathrm{src}$ increase bypass rates in a target language?}
+
+\medskip
+For a source language $s$ and target language $t$, we apply Equation~\ref{eq:intervention} with a positive coefficient, injecting the source jailbreak direction into target-language inputs at layer $k^*$:
+%
+\begin{equation}
+    \mathbf{h}'^{(k^*)} = \mathbf{h}^{(k^*)} + \alpha \cdot \hat{\mathbf{j}}_s^{(k^*)}
+    \label{eq:attack}
+\end{equation}
+%
+The primary metric is the bypass rate increase:
+%
+\begin{equation}
+    \Delta\mathrm{bypass}_{s \to t} = \mathrm{bypass}_\mathrm{attacked}(t) - \mathrm{bypass}_\mathrm{baseline}(t)
+    \label{eq:delta_bypass}
+\end{equation}
+
+We evaluate the following transfer directions:
+%
+\begin{itemize}[noitemsep]
+    \item \textbf{HRL\,$\to$\,HRL}: positive control, expected to work given geometric similarity among aligned languages
+    \item \textbf{LRL\,$\to$\,HRL}: tests whether LRL jailbreak vectors (orthogonal to $\mathbf{r}$) can still induce bypass in HRL targets
+    \item \textbf{HRL\,$\to$\,LRL}: tests whether HRL jailbreak vectors further increase already-high LRL bypass rates
+\end{itemize}
+
+The injection coefficient is set to $\alpha = 20$ for Qwen2.5-7B-Instruct and Llama-3.1-8B-Instruct, and $\alpha = 5$ for Gemma-2-9B-IT to avoid degenerate generation.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{RQ3: Cross-lingual Defense via Jailbreak Vector Subtraction}
+\label{sec:rq3}
+
+\textbf{Research Question 3:} \textit{Can subtracting a source language's jailbreak vector restore refusal in a target language, including low-resource languages where same-language defense is unavailable?}
+
+\medskip
+The defense intervention applies Equation~\ref{eq:intervention} with a negative coefficient, subtracting the source jailbreak direction from residual stream activations at $k^*$:
+%
+\begin{equation}
+    \mathbf{h}'^{(k^*)} = \mathbf{h}^{(k^*)} - \alpha \cdot \hat{\mathbf{j}}_s^{(k^*)}
+    \label{eq:defense}
+\end{equation}
+
+Inputs are drawn from the bypassed subset $\mathcal{B}_t$ (baseline compliance = 100\%), so the metric is the \textit{compliance rate after intervention} — the fraction of defended completions that remain non-refusing. A lower post-intervention compliance rate indicates more effective defense.
+
+Results are reported as a compliance rate matrix $C \in [0,1]^{|T| \times |S|}$, where $C_{t,s}$ is the post-intervention compliance rate for target language $t$ defended using $\hat{\mathbf{j}}_s$. We distinguish two conditions:
+
+\begin{itemize}[noitemsep]
+    \item \textbf{Self-defense} ($s = t$, diagonal entries): uses the target language's own jailbreak vector, replicating the base-paper setting~\citep{arditi2024refusal}
+    \item \textbf{Cross-lingual defense} ($s \neq t$, off-diagonal entries): uses a jailbreak vector from a different language; the novel contribution of this work
+\end{itemize}
+
+For LRL languages (Yoruba, Swahili, Amharic) where $\mathbf{j}_l$ cannot be extracted due to near-100\% bypass rates, self-defense is unavailable and only cross-lingual defense is applicable. In this setting, applying $-\hat{\mathbf{j}}_\mathrm{HRL}$ to LRL bypassed completions is interpreted not as \textit{restoring} refusal, but as \textit{injecting alignment} into a language that was never safety-tuned — an inference-time intervention requiring no additional training data.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Language Resource Classification}
+\label{sec:lang_classification}
+
+We categorise the 16 experimental languages into two groups based on their estimated representation in safety alignment training data.
+
+\paragraph{High-Resource Languages (HRL).}
+English (en), German (de), Japanese (ja), Korean (ko), Chinese (zh), Russian (ru), Thai (th), Arabic (ar), Spanish (es), French (fr), Italian (it), Dutch (nl), Polish (pl). These languages have substantial representation in RLHF and safety fine-tuning corpora and exhibit established refusal behavior under baseline evaluation.
+
+\paragraph{Low-Resource Languages (LRL).}
+Yoruba (yo), Swahili (sw), Amharic (am). These languages have minimal representation in publicly known safety training datasets. We hypothesise that their vulnerability to harmful requests reflects an \textit{absence} of refusal behavior rather than a \textit{defeat} of it — a claim we test geometrically in RQ1.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Experimental Setup}
+\label{sec:setup}
+
+\subsection{Models}
+
+We evaluate three open-weight instruction-tuned models: \textbf{Qwen2.5-7B-Instruct}~\citep{qwen25}, \textbf{Meta-Llama-3.1-8B-Instruct}~\citep{llama31}, and \textbf{Gemma-2-9B-IT}~\citep{gemma2}. These models span different training pipelines and safety alignment approaches, enabling us to assess whether geometric findings generalise across model families.
+
+\subsection{Dataset}
+
+We use an extended version of the PolyRefuse dataset~\citep{polyrefuse}, which we term \textbf{PolyRefuse Enhanced}, covering 16 languages including two new low-resource additions: Swahili and Amharic, translated using Google Translate. The dataset comprises the following splits per language:
+
+\begin{table}[h]
+\centering
+\caption{PolyRefuse Enhanced dataset statistics.}
+\label{tab:dataset}
+\begin{tabular}{llcc}
+\toprule
+\textbf{Type} & \textbf{Split} & \textbf{Samples} & \textbf{Use} \\
+\midrule
+Harmful  & test  & 572 & Baseline inference, RQ2/3 \\
+Harmful  & train & 260 & Refusal direction ($\mathbf{r}_l$) \\
+Harmless & train & 200 & Refusal direction ($\mathbf{r}_l$) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Safety Evaluation}
+
+Model outputs are evaluated using \textbf{WildGuard}~\citep{wildguard}, a dedicated safety classifier that labels each (prompt, response) pair with three binary attributes: whether the prompt is harmful, whether the response is a refusal, and whether the response is harmful. We use the \texttt{refusal} label as our primary classification signal. For languages other than English, we pass the original English prompt to WildGuard to avoid language-specific classifier bias.
+
+\subsection{Implementation Details}
+
+All activation extraction and steering experiments are implemented using PyTorch with forward-hook-based intervention on the transformer's residual stream. Jailbreak vectors $\mathbf{j}_l$ and refusal directions $\mathbf{r}_l$ are computed at the last token position across all layers and unit-normalised before use in interventions. Baseline inference is conducted with greedy decoding and a maximum of 200 new tokens. All experiments are run on NVIDIA A100 GPUs.
