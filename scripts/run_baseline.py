@@ -69,23 +69,25 @@ _ENHANCED_DIR = os.path.expanduser('~/experiment_thesis/ployrefuse_Enhanced')
 
 
 def load_dataset_split(split_type, split, lang):
-    from dataset.load_dataset import load_dataset_split as _orig
-    try:
-        return _orig(split_type, split, lang=lang)
-    except (FileNotFoundError, KeyError):
-        fname = f'{split_type}_{split}_translated_{lang}.json'
-        fpath = os.path.join(_ENHANCED_DIR, fname)
+    # Always load from ployrefuse_Enhanced so the model receives the
+    # target-language instruction (instruction_translated), not the English original.
+    fname = f'{split_type}_{split}_translated_{lang}.json'
+    fpath = os.path.join(_ENHANCED_DIR, fname)
+    if os.path.exists(fpath):
         with open(fpath, 'r') as f:
             items = json.load(f)
         result = []
         for item in items:
             translated = item.get('instruction_translated', item['instruction'])
             result.append({
-                'instruction': translated,
-                'instruction_en': item['instruction'],
+                'instruction': translated,        # target-language prompt for model
+                'instruction_en': item['instruction'],  # English for WildGuard
                 'category': item.get('category', ''),
             })
         return result
+    # Fallback to original repo dataset if enhanced file not available
+    from dataset.load_dataset import load_dataset_split as _orig
+    return _orig(split_type, split, lang=lang)
 
 
 # ── WildGuard ─────────────────────────────────────────────────────────────────
