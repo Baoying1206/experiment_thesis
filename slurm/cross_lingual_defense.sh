@@ -1,60 +1,41 @@
 #!/bin/bash
-#SBATCH --job-name=cross-defense
+#SBATCH --job-name=xling-defense
 #SBATCH --partition=gpu
 #SBATCH --account=slurm-students
-#SBATCH --output=slurm/logs/cross_defense_%A_%a.out
-#SBATCH --array=0-8   # 3 models × 3 target langs
+#SBATCH --output=slurm/logs/defense_%j.out
+
+# Submit with MODEL_IDX=0/1/2:
+#   sbatch --export=MODEL_IDX=0 slurm/cross_lingual_defense.sh
 
 MODEL_PATHS=(
     "/home/h24/baga0553/models/Qwen2.5-7B-Instruct"
-    "/home/h24/baga0553/models/Qwen2.5-7B-Instruct"
-    "/home/h24/baga0553/models/Qwen2.5-7B-Instruct"
     "/home/h24/baga0553/models/Llama-3.1-8B-Instruct"
-    "/home/h24/baga0553/models/Llama-3.1-8B-Instruct"
-    "/home/h24/baga0553/models/Llama-3.1-8B-Instruct"
-    "/home/h24/baga0553/models/gemma-2-9b-it"
-    "/home/h24/baga0553/models/gemma-2-9b-it"
     "/home/h24/baga0553/models/gemma-2-9b-it"
 )
 MODEL_ALIASES=(
     "Qwen2.5-7B-Instruct"
-    "Qwen2.5-7B-Instruct"
-    "Qwen2.5-7B-Instruct"
-    "Meta-Llama-3.1-8B-Instruct"
-    "Meta-Llama-3.1-8B-Instruct"
     "Meta-Llama-3.1-8B-Instruct"
     "gemma-2-9b-it"
-    "gemma-2-9b-it"
-    "gemma-2-9b-it"
 )
-TARGET_LANGS=(
-    "yo"  "th"  "ar"
-    "yo"  "th"  "ar"
-    "yo"  "th"  "ar"
-)
-ALPHAS=(
-    "20.0" "20.0" "20.0"
-    "20.0" "20.0" "20.0"
-    "5.0"  "5.0"  "5.0"
-)
-# Qwen has refusal_dir_en.pt; LLaMA and Gemma only extracted for
-# high-bypass languages — use ja (available for all three, bypass ~5-25%)
-REFUSAL_SRCS=(
-    "en"   "en"   "en"
-    "ja"   "ja"   "ja"
-    "ja"   "ja"   "ja"
-)
+ALPHAS=("20.0" "20.0" "5.0")
 
-MODEL_PATH=${MODEL_PATHS[$SLURM_ARRAY_TASK_ID]}
-MODEL_ALIAS=${MODEL_ALIASES[$SLURM_ARRAY_TASK_ID]}
-TARGET_LANG=${TARGET_LANGS[$SLURM_ARRAY_TASK_ID]}
-ALPHA=${ALPHAS[$SLURM_ARRAY_TASK_ID]}
-REFUSAL_SRC=${REFUSAL_SRCS[$SLURM_ARRAY_TASK_ID]}
+# RQ3: subtract j_l to restore refusal on bypassed samples.
+# HRL sources (en/zh/ja/ko) are reliable; LRL (yo/sw/am) included but may
+# have no jb_vec if bypass ≈ 100% — script skips missing ones automatically.
+# Diagonal entries replicate base-paper Table 6; off-diagonal = new results.
+JB_SRCS="en,de,zh,ja,ko,ru,th,ar,yo,sw,am"
+TARGET_LANGS="en,de,zh,ja,ko,ru,th,ar,es,fr,it,nl,pl,yo,sw,am"
 
-echo "Model: $MODEL_ALIAS  Target: $TARGET_LANG  RefusalSrc: $REFUSAL_SRC  Alpha: $ALPHA  Start: $(date)"
+MODEL_IDX=${MODEL_IDX:-0}
+MODEL_PATH=${MODEL_PATHS[$MODEL_IDX]}
+MODEL_ALIAS=${MODEL_ALIASES[$MODEL_IDX]}
+ALPHA=${ALPHAS[$MODEL_IDX]}
+
+echo "Model: $MODEL_ALIAS  alpha=$ALPHA  Start: $(date)"
 
 cd ~/thesis_experiment/Multilingual-Refusal
-source ~/thesis_experiment/Multilingual-Refusal/venv/bin/activate
+mkdir -p slurm/logs
+source venv/bin/activate
 export PYTHONPATH=/home/h24/baga0553/thesis_experiment/Multilingual-Refusal:$PYTHONPATH
 
 python scripts/cross_lingual_defense.py \
@@ -63,15 +44,11 @@ python scripts/cross_lingual_defense.py \
     --vector_dir      "output/jailbreak_analysis/$MODEL_ALIAS" \
     --baseline_dir    "output/ja_vector_sweep" \
     --exp_id          "20250519-232436/1" \
-    --output_dir      "output/cross_defense/$MODEL_ALIAS" \
-    --refusal_src     "$REFUSAL_SRC" \
-    --jb_srcs         ja,ko,yo \
-    --target_langs    "$TARGET_LANG" \
-    --check_langs     en,de \
+    --output_dir      "output/defense/$MODEL_ALIAS" \
+    --jb_srcs         "$JB_SRCS" \
+    --target_langs    "$TARGET_LANGS" \
     --alpha           "$ALPHA" \
-    --beta            1.0 \
     --batch_size      8 \
-    --max_new_tokens  200 \
-    --harmless_n      128
+    --max_new_tokens  200
 
 echo "Done: $(date)"

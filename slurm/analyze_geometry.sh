@@ -13,7 +13,7 @@ export PYTHONPATH=/home/h24/baga0553/thesis_experiment/Multilingual-Refusal:$PYT
 python scripts/analyze_geometry.py \
     --results_dir  output/jailbreak_analysis \
     --transfer_dir output/transfer \
-    --defense_dir  output/cross_defense \
+    --defense_dir  output/defense \
     --output_dir   output/figures
 
 echo "Done: $(date)"
