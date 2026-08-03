@@ -37,9 +37,10 @@ from pipeline.model_utils.model_factory import construct_model_base
 def _patch_refusal_toks():
     for mod_name, cls_name in [
         ('pipeline.model_utils.qwen2_model', 'Qwen2Model'),
+        ('pipeline.model_utils.llama3_model', 'Llama3Model'),
         ('pipeline.model_utils.llama_model', 'LlamaModel'),
-        ('pipeline.model_utils.gemma_model', 'GemmaModel'),
         ('pipeline.model_utils.gemma2_model', 'Gemma2Model'),
+        ('pipeline.model_utils.gemma_model', 'GemmaModel'),
     ]:
         try:
             import importlib
