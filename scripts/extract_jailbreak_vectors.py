@@ -30,9 +30,34 @@ import torch
 import torch.nn.functional as F
 from tqdm import tqdm
 
-from dataset.load_dataset import load_dataset_split
 from pipeline.model_utils.model_factory import construct_model_base
 from pipeline.submodules.generate_directions import get_mean_activations
+
+
+# ── Dataset loading with fallback to ployrefuse_Enhanced ─────────────────────
+_ENHANCED_DIR = os.path.expanduser('~/experiment_thesis/ployrefuse_Enhanced')
+
+
+def load_dataset_split(split_type, split, lang, instructions_only=False):
+    from dataset.load_dataset import load_dataset_split as _orig
+    try:
+        return _orig(split_type, split, lang=lang, instructions_only=instructions_only)
+    except (FileNotFoundError, KeyError, TypeError):
+        fname = f'{split_type}_{split}_translated_{lang}.json'
+        fpath = os.path.join(_ENHANCED_DIR, fname)
+        with open(fpath, 'r') as f:
+            items = json.load(f)
+        if instructions_only:
+            return [item.get('instruction_translated', item['instruction']) for item in items]
+        result = []
+        for item in items:
+            translated = item.get('instruction_translated', item['instruction'])
+            result.append({
+                'instruction': translated,
+                'instruction_en': item['instruction'],
+                'category': item.get('category', ''),
+            })
+        return result
 
 
 LANGS = ['en', 'de', 'ja', 'ko', 'zh', 'ru', 'th', 'yo', 'ar', 'es', 'fr', 'it', 'nl', 'pl', 'sw', 'am']
