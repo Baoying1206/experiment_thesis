@@ -29,28 +29,18 @@ However, three problems remain unaddressed in the existing literature.
 \textbf{Third}, no inference-time defense exists for low-resource languages that lack sufficient training data for safety fine-tuning. If a high-resource jailbreak vector can be subtracted from low-resource activations to restore refusal, this would provide a training-free alignment method for data-scarce language settings.
 
 % -----------------------------------------------------------------------------
-\section{Research Question and Hypotheses}
+\section{Research Questions}
 \label{sec:rq}
 
-This thesis addresses the following research question:
+This thesis addresses three research questions.
 
-\begin{quote}
-\textit{Do jailbreak vectors in multilingual LLMs share a cross-lingual geometric structure, and can this structure support cross-lingual attack transfer and inference-time defense for low-resource languages?}
-\end{quote}
+\begin{description}
+    \item[\textbf{RQ1}] Is the jailbreak vector $\mathbf{j}_l$ geometrically related to the refusal direction $\mathbf{r}_l$, and does this relationship differ between high-resource and low-resource languages?
 
-Three testable hypotheses are derived from the representation engineering literature~\citep{arditi2024refusal, zou2023representation} and the multilingual safety findings of Wang et al.~\citeyearpar{wang2026refusal}:
+    \item[\textbf{RQ2}] Can a source-language jailbreak vector $\hat{\mathbf{j}}_\mathrm{src}$ be injected into target-language activations at inference time to increase bypass rates?
 
-\medskip
-\noindent\textbf{H1 (Geometry):}
-\textit{For high-resource languages, the jailbreak vector $\mathbf{j}_l$ is anti-parallel to the refusal direction $\mathbf{r}_l$. For low-resource languages, $\mathbf{j}_l$ is orthogonal to $\mathbf{r}_l$, reflecting the absence of an established refusal mechanism.}
-
-\medskip
-\noindent\textbf{H2 (Attack Transfer):}
-\textit{Injecting a source-language jailbreak vector $\hat{\mathbf{j}}_\mathrm{src}$ into target-language activations at inference time increases bypass rates in the target language.}
-
-\medskip
-\noindent\textbf{H3 (Defense Transfer):}
-\textit{Subtracting a source-language jailbreak vector $\hat{\mathbf{j}}_\mathrm{src}$ from target-language activations reduces compliance rates, including in low-resource languages where same-language defense is not available.}
+    \item[\textbf{RQ3}] Can subtracting a source-language jailbreak vector from target-language activations reduce compliance rates, including in low-resource languages where same-language defense is not available?
+\end{description}
 
 % -----------------------------------------------------------------------------
 \section{Delimitations}
