@@ -16,7 +16,6 @@ __pycache__/
 .env
 
 # Experiment outputs (generated on cluster, not committed)
-output/
 logs/
 *.log
 *.out
