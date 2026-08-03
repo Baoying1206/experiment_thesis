@@ -1,0 +1,104 @@
+% =============================================================================
+% Part II: Extended Background
+% =============================================================================
+\chapter{Background}
+\label{chap:background}
+
+This chapter provides a detailed background to the thesis and reviews relevant related work. Section~\ref{sec:align} covers safety alignment in LLMs. Section~\ref{sec:jailbreak} surveys jailbreak attack methods. Section~\ref{sec:multilingual} reviews the multilingual safety literature. Section~\ref{sec:repeng} introduces representation engineering as the methodological foundation. Section~\ref{sec:positioning} positions this work relative to existing research.
+
+% -----------------------------------------------------------------------------
+\section{Safety Alignment in Large Language Models}
+\label{sec:align}
+
+Modern LLMs are trained in two stages. A base model is first pre-trained on large text corpora to develop general language capabilities. A subsequent alignment stage then fine-tunes the model to follow instructions and avoid harmful outputs. The dominant alignment technique is Reinforcement Learning from Human Feedback (RLHF)~\citep{ouyang2022training}, in which human annotators rank model outputs and a reward model is trained to predict these preferences. The language model is then optimised to maximise the reward signal via proximal policy optimisation.
+
+A key limitation of RLHF as currently practiced is its language coverage. Annotators are predominantly English speakers, safety evaluations are conducted in English, and the harmful content taxonomies used to guide annotation reflect culturally specific, English-language contexts~\citep{krasnodkebska2026safety}. Constitutional AI~\citep{bai2022constitutional} addresses some of these limitations by using model-generated critiques to enforce safety principles, but the principles themselves are specified in English. As a result, safety alignment is most robust in English and degrades across all other languages, with the degradation scaling with linguistic distance from English and with the scarcity of the target language in training data~\citep{wang2024all, shen2024language}.
+
+% -----------------------------------------------------------------------------
+\section{Jailbreak Attacks}
+\label{sec:jailbreak}
+
+Jailbreak attacks are inputs designed to bypass a model's safety guardrails and elicit harmful responses. Research has identified several categories of attack.
+
+\paragraph{Prompt-based attacks.}
+Early jailbreaks relied on manually crafted inputs that reframe harmful requests through roleplay, hypothetical scenarios, or authority impersonation~\citep{wei2023jailbroken}. Wei et al.~\citeyearpar{wei2023jailbroken} provide a taxonomic analysis of why safety training fails, identifying two root causes: competing objectives (safety training conflicts with instruction following) and mismatched generalization (the model has learned a surface-level proxy for safety rather than a principled refusal behavior).
+
+\paragraph{Optimisation-based attacks.}
+Zou et al.~\citeyearpar{zou2023universal} introduced GCG (Greedy Coordinate Gradient), which automatically searches for a short adversarial suffix that maximises the probability of a compliance token. GCG attacks are transferable across models and languages, demonstrating that jailbreak vulnerabilities are not idiosyncratic to specific models. These attacks suggest that refusal behavior is fragile at the input level.
+
+\paragraph{Representation-level attacks.}
+A more direct approach intervenes on the model's internal activations rather than on the input text. Arditi et al.~\citeyearpar{arditi2024refusal} showed that subtracting the refusal direction $\mathbf{r}_l$ from residual stream activations at a single layer reliably induces compliance, even on inputs that the model would otherwise refuse. Li et al.~\citeyearpar{li2025revisiting} extended this analysis to show that jailbreak prompts shift model representations in directions that correlate with the refusal direction, connecting prompt-level and representation-level views of jailbreaking. Xu et al.~\citeyearpar{xu2024uncovering} used concept activation vectors to identify safety-relevant directions and demonstrated their utility for both attack detection and evasion.
+
+% -----------------------------------------------------------------------------
+\section{Multilingual Safety}
+\label{sec:multilingual}
+
+\subsection{Empirical Evidence of the Multilingual Safety Gap}
+
+The multilingual safety gap has been documented across a range of models and languages. Yong et al.~\citeyearpar{yong2023low} demonstrated that translating harmful English prompts into low-resource languages such as Scots Gaelic, Zulu, or Hmong bypasses GPT-4's safety filters with high reliability. They attribute this to the near-absence of these languages in RLHF training data. Deng et al.~\citeyearpar{deng2024multilingual} systematically evaluated jailbreak success across 54 languages, confirming that bypass rates are inversely correlated with language resource level and that language-mixing strategies further degrade refusal behavior. Shen et al.~\citeyearpar{shen2024language} traced the failure mode to the model's internal processing: harmful prompts in low-resource languages activate different internal states than English equivalents, bypassing the safety-relevant representations the model has learned to detect.
+
+Wang et al.~\citeyearpar{wang2024all} conducted a comprehensive multilingual safety evaluation and proposed targeted mitigation strategies, but found that multilingual safety fine-tuning is expensive and often degrades performance in non-safety domains.
+
+\subsection{Mechanistic Accounts}
+
+Two recent papers directly address the mechanism of LRL vulnerability at the representation level, and are most closely related to this thesis.
+
+Verma and Bharadwaj~\citeyearpar{verma2025hidden} studied the internal representations of safety-aligned models across languages and found that the ``safety space'' — the region of activation space associated with refusal — is significantly smaller and less well-defined for low-resource languages than for English or high-resource languages. This provides indirect evidence that LRL vulnerability reflects an absence of alignment rather than its suppression.
+
+Aziz et al.~\citeyearpar{aziz2026low} explicitly test the suppression vs.\ absence distinction, framing LRL safety failures as \textit{action failures} rather than \textit{representation failures}: the model can represent harmfulness in LRL inputs but fails to take the refusal action. Our work tests a related but distinct prediction at the geometric level, examining the relationship between the jailbreak direction and the refusal direction.
+
+Atil et al.~\citeyearpar{atil2025methods} study whether jailbreak and defense methods generalise across languages, finding that methods effective in English do not reliably transfer to other languages, and that LRL settings require substantially different approaches. This directly motivates our cross-lingual transfer experiments.
+
+\subsection{Systematic Reviews}
+
+Krasnod\k{e}bska et al.~\citeyearpar{krasnodkebska2026safety} provide a systematic literature review of LLM safety beyond English, identifying data scarcity, annotation bias, and evaluation gap as the three primary sources of multilingual safety risk. Their review confirms that representation-level analysis of multilingual safety is an emerging and underexplored area.
+
+% -----------------------------------------------------------------------------
+\section{Representation Engineering for Safety}
+\label{sec:repeng}
+
+\subsection{Linear Representations of Safety Behavior}
+
+The linear representation hypothesis posits that semantic properties of model inputs are encoded as directions in the residual stream~\citep{zou2023representation}. Applied to safety, this means that the model's internal ``decision'' to refuse or comply is captured by a linear direction in activation space. Zou et al.~\citeyearpar{zou2023representation} introduced Representation Engineering, which extracts such directions using a contrastive dataset and the Difference-in-Means (DiM) estimator, and uses them to steer model behavior via activation addition.
+
+Arditi et al.~\citeyearpar{arditi2024refusal} established that a \textit{refusal direction} $\mathbf{r}_l$ can be extracted from the difference in mean activations between harmful and harmless inputs. They showed that: (a) this direction is consistent across languages for safety-aligned models, (b) subtracting it induces compliance, and (c) adding it induces refusal. Their appendix demonstrates the feasibility of same-language $\pm\mathbf{r}_l$ interventions but does not study cross-lingual transfer, does not examine LRL languages, and does not define a jailbreak-specific direction. This thesis addresses all three gaps.
+
+\subsection{Geometry of Refusal}
+
+Wollschl{\"a}ger et al.~\citeyearpar{wollschlager2025geometry} study the geometry of refusal representations in detail, introducing the concept of ``refusal cones'' — regions of activation space associated with refusal — and showing that refusal representations are more complex than a single direction. Marshall et al.~\citeyearpar{marshall2024refusal} show that the refusal function is better described as an affine function than a linear one, and that the bias term accounts for a non-trivial portion of refusal behavior. These findings suggest that while a single direction captures most of the variance in refusal behavior, it is not the complete picture.
+
+Zhao et al.~\citeyearpar{zhao2026llms} provide the most directly relevant finding for our H1: they show that LLMs encode \textit{harmfulness} and \textit{refusal} in separable directions in activation space. This means that the jailbreak vector $\mathbf{j}_l$ — which captures the difference between complying and refusing in response to harmful inputs — need not be identical to the negation of the refusal direction $\mathbf{r}_l$, supporting the theoretical possibility of $\mathbf{j}_l \perp \mathbf{r}_l$ in LRL settings.
+
+\subsection{Vector-based Defense and Attack}
+
+Wang et al.~\citeyearpar{wang2025surgical} show that ablating the refusal direction via single-vector intervention reduces false refusals on benign inputs, demonstrating that refusal direction surgery can be applied with surgical precision. Piras et al.~\citeyearpar{piras2026som} extend this to multi-directional suppression, showing that using multiple refusal directions improves the robustness of vector-based attacks. These works establish the effectiveness and versatility of activation-steering for safety control. Our defense experiments (H3) adopt the same intervention mechanism but apply it in the cross-lingual setting.
+
+% -----------------------------------------------------------------------------
+\section{Positioning}
+\label{sec:positioning}
+
+Table~\ref{tab:related_work} summarises how this thesis relates to the most directly relevant prior work across five dimensions: multilingual evaluation, low-resource language inclusion, jailbreak-specific vector extraction, mechanistic geometric analysis, cross-lingual transfer, and defense.
+
+\begin{table}[h]
+\centering
+\caption{Positioning relative to related work. \checkmark~= addressed; $\circ$~= partially addressed; --~= not addressed.}
+\label{tab:related_work}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lcccccc}
+\toprule
+\textbf{Work} & \textbf{Multilingual} & \textbf{LRL} & \textbf{JB vector} & \textbf{Mechanism} & \textbf{Cross-lingual} & \textbf{Defense} \\
+\midrule
+Arditi et al.~\citeyearpar{arditi2024refusal}       & $\circ$    & --         & --         & \checkmark & --         & \checkmark \\
+Wang et al.~\citeyearpar{wang2026refusal}            & \checkmark & --         & --         & \checkmark & --         & --         \\
+Yong et al.~\citeyearpar{yong2023low}                & \checkmark & \checkmark & --         & --         & --         & --         \\
+Deng et al.~\citeyearpar{deng2024multilingual}       & \checkmark & \checkmark & --         & --         & --         & --         \\
+Aziz et al.~\citeyearpar{aziz2026low}                & \checkmark & \checkmark & --         & \checkmark & --         & --         \\
+Atil et al.~\citeyearpar{atil2025methods}            & \checkmark & $\circ$    & --         & --         & \checkmark & \checkmark \\
+Zhao et al.~\citeyearpar{zhao2026llms}               & --         & --         & $\circ$    & \checkmark & --         & --         \\
+\midrule
+\textbf{This thesis}                                 & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The key novelty of this thesis is the combination of: (a) a jailbreak vector $\mathbf{j}_l$ extracted purely from inference behavior without harmless data, (b) geometric analysis of this vector across HRL and LRL languages, and (c) explicit cross-lingual transfer experiments for both attack and defense. No prior work addresses all three simultaneously.

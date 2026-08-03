@@ -1,4 +1,79 @@
+% =============================================================================
+% Part V: Discussion
+% =============================================================================
 \chapter{Discussion}
 \label{chap:discussion}
 
+% -----------------------------------------------------------------------------
+\section{Summary of Findings}
+\label{sec:summary}
+
+% TODO: fill after results are available
+% Brief recap of H1/H2/H3 findings and whether each hypothesis is supported.
+
+% -----------------------------------------------------------------------------
+\section{Theoretical Contributions}
+\label{sec:theoretical}
+
 % TODO
+
+% -----------------------------------------------------------------------------
+\section{Practical Significance}
+\label{sec:practical}
+
+% TODO
+
+% -----------------------------------------------------------------------------
+\section{Limitations}
+\label{sec:limitations}
+
+\subsection{Validity}
+
+\paragraph{Internal validity.}
+The jailbreak vector $\mathbf{j}_l$ is computed from WildGuard labels, which are themselves imperfect. WildGuard achieves strong but not perfect agreement with human judgement~\citep{han2024wildguard}, meaning that some bypassed samples may be misclassified refusals and vice versa. This labelling noise propagates into the DiM estimate of $\mathbf{j}_l$ and may reduce its quality, particularly for languages with small bypassed groups.
+
+\paragraph{Construct validity.}
+We operationalise ``jailbreak mechanism'' as the cosine similarity $\cos(\hat{\mathbf{j}}_l, \hat{\mathbf{r}}_l)$. A low cosine similarity in LRL languages is consistent with our absence hypothesis, but does not uniquely confirm it: an alternative explanation is that LRL jailbreak works via a different suppression mechanism that is geometrically distinct from the HRL refusal direction. Future work using causal interventions could test this alternative more directly.
+
+\subsection{Reliability}
+
+All experiments use greedy decoding, which is deterministic and ensures reproducibility. The DiM vectors are computed over fixed dataset splits with a fixed random seed for harmless sampling. Results can be reproduced exactly given access to the same model weights and dataset.
+
+\subsection{Generalizability}
+
+\paragraph{Model generalizability.}
+We evaluate three models of similar scale (7--9B parameters). It is not known whether findings generalise to larger models (e.g., 70B) where safety alignment may be more robust, or to models trained with different alignment approaches (e.g., DPO vs.\ PPO).
+
+\paragraph{Language generalizability.}
+Our LRL set consists of three languages: Yoruba, Swahili, and Amharic. These share the characteristic of low safety training coverage, but differ typologically. It is possible that findings for some LRL languages do not generalise to others. Expanding to more LRL languages would strengthen the generalizability of the LRL findings.
+
+\paragraph{Domain generalizability.}
+All experiments use harmful instructions from the PolyRefuse benchmark~\citep{wang2026refusal}. The jailbreak vectors extracted may be specific to this distribution of harmful content. Testing with other harmful content taxonomies would be a natural extension.
+
+\subsection{Ethical Considerations}
+
+This research involves the extraction and application of jailbreak vectors that can be used to bypass safety guardrails. The primary intended use is defensive: understanding the mechanism of jailbreak enables the design of more robust alignment methods, particularly for low-resource languages. All experiments are conducted on closed test sets without public disclosure of specific attack vectors. The defense contribution — cross-lingual inference-time alignment — is directly applicable to improving safety in LRL settings where fine-tuning-based approaches are infeasible.
+
+% -----------------------------------------------------------------------------
+\section{Future Work}
+\label{sec:future}
+
+Several directions remain open for future research:
+
+\begin{itemize}
+    \item \textbf{Causal verification of the absence hypothesis.} The geometric evidence from H1 is consistent with the absence hypothesis but does not causally verify it. Causal mediation analysis~\citep{vig2020causal} or targeted path patching could test whether the absence of the refusal direction causally explains LRL compliance.
+
+    \item \textbf{Multi-vector defense.} Our defense uses a single jailbreak vector. Piras et al.~\citeyearpar{piras2026som} showed that multi-directional suppression improves the robustness of refusal direction attacks; a similar approach applied to the defense direction may improve cross-lingual defense effectiveness.
+
+    \item \textbf{Larger models and more languages.} Extending experiments to 70B-scale models and a larger set of LRL languages would strengthen generalizability claims.
+
+    \item \textbf{Multilingual safety fine-tuning guided by geometry.} If $\mathbf{j}_l$ characterises the direction of alignment failure in LRL languages, it could guide targeted safety fine-tuning that specifically addresses this direction, rather than relying on generic multilingual RLHF.
+\end{itemize}
+
+% -----------------------------------------------------------------------------
+\section{Conclusion}
+\label{sec:conclusion}
+
+% TODO: fill after results are available
+% Summarise what was found, whether hypotheses were supported, and the broader
+% implication for multilingual LLM safety.

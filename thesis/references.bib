@@ -1,7 +1,11 @@
-@article{ouyang2022instructgpt,
+% ── Safety Alignment ──────────────────────────────────────────────────────────
+
+@article{ouyang2022training,
   title   = {Training Language Models to Follow Instructions with Human Feedback},
-  author  = {Ouyang, Long and Wu, Jeff and Jiang, Xu and Almeida, Diogo and Wainwright, Carroll L. and Mishkin, Pamela and Zhang, Chong and Agarwal, Sandhini and Slama, Katarina and Ray, Alex and others},
-  journal = {arXiv preprint arXiv:2203.02155},
+  author  = {Ouyang, Long and Wu, Jeffrey and Jiang, Xu and Almeida, Diogo and Wainwright, Carroll and Mishkin, Pamela and Zhang, Chong and Agarwal, Sandhini and Slama, Katarina and Ray, Alex and others},
+  journal = {Advances in Neural Information Processing Systems},
+  volume  = {35},
+  pages   = {27730--27744},
   year    = {2022}
 }
 
@@ -12,138 +16,36 @@
   year    = {2022}
 }
 
-@article{openai2023gpt4,
-  title   = {GPT-4 Technical Report},
-  author  = {OpenAI},
-  journal = {arXiv preprint arXiv:2303.08774},
-  year    = {2023}
-}
+% ── Base Papers ───────────────────────────────────────────────────────────────
 
-@article{anthropic2024claude,
-  title   = {The Claude 3 Model Family: Opus, Sonnet, Haiku},
-  author  = {Anthropic},
-  journal = {Technical Report},
+@article{arditi2024refusal,
+  title   = {Refusal in Language Models Is Mediated by a Single Direction},
+  author  = {Arditi, Andy and Obeso, Oscar and Syed, Aaquib and Paleka, Daniel and Panickssery, Nina and Gurnee, Wes and Nanda, Neel},
+  journal = {arXiv preprint arXiv:2406.11717},
   year    = {2024}
 }
 
-@article{yong2023lowresource,
-  title   = {Low-Resource Languages Jailbreak GPT-4},
-  author  = {Yong, Zheng-Xin and Menghini, Cristina and Bach, Stephen H.},
-  journal = {arXiv preprint arXiv:2310.02446},
-  year    = {2023}
+@article{wang2026refusal,
+  title   = {Refusal Direction Is Universal Across Safety-Aligned Languages},
+  author  = {Wang, Xinpeng and Wang, Mingyang and Liu, Yihong and Sch{\"u}tze, Hinrich and Plank, Barbara},
+  journal = {Advances in Neural Information Processing Systems},
+  volume  = {38},
+  pages   = {32380--32423},
+  year    = {2026}
 }
 
-@article{deng2023multilingual,
-  title   = {Multilingual Jailbreak Challenges in Large Language Models},
-  author  = {Deng, Yue and Zhang, Wenxuan and Pan, Sinno Jialin and Bing, Lidong},
-  journal = {arXiv preprint arXiv:2310.06474},
-  year    = {2023}
-}
+% ── Evaluation ────────────────────────────────────────────────────────────────
 
-@inproceedings{perez2022jailbreak,
-  title     = {Ignore Previous Prompt: Attack Techniques For Language Models},
-  author    = {Perez, Fabio and Ribeiro, Ian},
-  booktitle = {NeurIPS Workshop on Machine Learning Safety},
-  year      = {2022}
-}
-
-@article{zou2023gcg,
-  title   = {Universal and Transferable Adversarial Attacks on Aligned Language Models},
-  author  = {Zou, Andy and Wang, Zifan and Kolter, J. Zico and Fredrikson, Matt},
-  journal = {arXiv preprint arXiv:2307.15043},
-  year    = {2023}
-}
-
-@article{liu2023autodan,
-  title   = {AutoDAN: Generating Stealthy Jailbreak Prompts on Aligned Large Language Models},
-  author  = {Liu, Xiaogeng and Xu, Nan and Chen, Muhao and Xiao, Chaowei},
-  journal = {arXiv preprint arXiv:2310.04451},
-  year    = {2023}
-}
-
-@article{shen2024language,
-  title   = {Language-Specific Safety Training for Large Language Models},
-  author  = {Shen, Qizhi and Zeng, Qiang and He, Zifeng and Zhang, Wenliang and Du, Zhengyu},
-  journal = {arXiv preprint arXiv:2402.03765},
+@article{han2024wildguard,
+  title   = {WildGuard: Open One-Stop Moderation Tools for Safety Risks, Jailbreaks, and Refusals of LLMs},
+  author  = {Han, Seungju and Rao, Kavel and Ettinger, Allyson and Jiang, Liwei and Lin, Bill Yuchen and Lambert, Nathan and Choi, Yejin and Dziri, Nouha},
+  journal = {Advances in Neural Information Processing Systems},
+  volume  = {37},
+  pages   = {8093--8131},
   year    = {2024}
 }
 
-@article{zhang2023safetybench,
-  title   = {SafetyBench: Evaluating the Safety of Large Language Models},
-  author  = {Zhang, Zhexin and Lei, Leqi and Wu, Lindong and Sun, Rui and Huang, Yongkang and Long, Chong and Liu, Xiao and Lei, Xuanyu and Tang, Jie and Huang, Minlie},
-  journal = {arXiv preprint arXiv:2309.07045},
-  year    = {2023}
-}
-
-@article{wang2023allsafe,
-  title   = {All Languages Are NOT Created (Tokenized) Equal},
-  author  = {Wang, Yizhong and Kordi, Yeganeh and Mishra, Swaroop and Liu, Alisa and Smith, Noah A. and Khashabi, Daniel and Hajishirzi, Hannaneh},
-  journal = {arXiv preprint arXiv:2305.07002},
-  year    = {2023}
-}
-
-@article{elhage2022superposition,
-  title   = {Toy Models of Superposition},
-  author  = {Elhage, Nelson and Henighan, Tristan and Joseph, Anthropic and Askell, Amanda and Bai, Yuntao and Chen, Anna and Conerly, Tom and DasSarma, Nova and Drain, Dawn and Ganguli, Deep and others},
-  journal = {Transformer Circuits Thread},
-  year    = {2022}
-}
-
-@article{burns2022discovering,
-  title   = {Discovering Latent Knowledge in Language Models Without Supervision},
-  author  = {Burns, Collin and Ye, Haotian and Klein, Dan and Steinhardt, Jacob},
-  journal = {arXiv preprint arXiv:2212.03827},
-  year    = {2022}
-}
-
-@article{marks2023geometry,
-  title   = {The Geometry of Truth: Emergent Linear Structure in Large Language Model Representations of True/False Datasets},
-  author  = {Marks, Samuel and Tegmark, Max},
-  journal = {arXiv preprint arXiv:2310.06824},
-  year    = {2023}
-}
-
-@inproceedings{pires2019multilingual,
-  title     = {How Multilingual is Multilingual BERT?},
-  author    = {Pires, Telmo and Schlinger, Eva and Garrette, Dan},
-  booktitle = {Proceedings of ACL},
-  year      = {2019}
-}
-
-@article{shi2022language,
-  title   = {Language Models are Multilingual Chain-of-Thought Reasoners},
-  author  = {Shi, Freda and Suzgun, Mirac and Freitag, Markus and Wang, Xuezhi and Srivats, Suraj and Vosoughi, Soroush and Chung, Hyung Won and Tay, Yi and Ruder, Sebastian and Zhou, Denny and others},
-  journal = {arXiv preprint arXiv:2210.03057},
-  year    = {2022}
-}
-
-@article{zhao2024llm,
-  title   = {How do Large Language Models Handle Ambiguity in Multi-Language Scenarios?},
-  author  = {Zhao, Yan and Dou, Zipeng and Feng, Yang and others},
-  journal = {arXiv preprint arXiv:2401.09395},
-  year    = {2024}
-}
-
-@article{gehman2020realtoxicityprompts,
-  title   = {RealToxicityPrompts: Evaluating Neural Toxic Degeneration in Language Models},
-  author  = {Gehman, Samuel and Gururangan, Suchin and Sap, Maarten and Choi, Yejin and Smith, Noah A.},
-  journal = {arXiv preprint arXiv:2009.11462},
-  year    = {2020}
-}
-
-@article{harmbench,
-  title   = {HarmBench: A Standardized Evaluation Framework for Automated Red Teaming and Robust Refusal},
-  author  = {Mazeika, Mantas and Phan, Long and Yin, Xuwang and Zou, Andy and Wang, Zifan and Mu, Norman and Sakhaee, Elham and Li, Nathaniel and Basart, Steven and Li, Bo and others},
-  journal = {arXiv preprint arXiv:2402.04249},
-  year    = {2024}
-}
-
-@inproceedings{arditi2024refusal,
-  title     = {Refusal in Language Models Is Mediated by a Single Direction},
-  author    = {Arditi, Andy and Obeso, Oscar and Syed, Aaquib and Paleka, Daniel and Rimsky, Nina and Gurnee, Wes and Nanda, Neel},
-  booktitle = {Advances in Neural Information Processing Systems},
-  year      = {2024}
-}
+% ── Representation Engineering ────────────────────────────────────────────────
 
 @article{zou2023representation,
   title   = {Representation Engineering: A Top-Down Approach to AI Transparency},
@@ -152,19 +54,146 @@
   year    = {2023}
 }
 
-@article{wildguard,
-  title   = {WildGuard: Open One-Stop Moderation Tools for Safety Risks, Jailbreaks, and Refusals of LLMs},
-  author  = {Han, Seungju and Kim, Leena and Raza, Muhammed and Rao, Bharat and Liusie, Adian and Suwaileh, Reem and Kazeminejad, Ghazal and Ma, Zhengyu and Hakobian, Sella Nevo and Wern, Cheng-Chun and others},
-  journal = {arXiv preprint arXiv:2406.18495},
+@article{marshall2024refusal,
+  title   = {Refusal in LLMs Is an Affine Function},
+  author  = {Marshall, Thomas and Scherlis, Adam and Belrose, Nora},
+  journal = {arXiv preprint arXiv:2411.09003},
   year    = {2024}
 }
 
-@article{polyrefuse,
-  title   = {Refusal Direction is Universal Across Safety-Aligned Languages},
-  author  = {TODO},
-  journal = {TODO},
+@article{wollschlager2025geometry,
+  title   = {The Geometry of Refusal in Large Language Models: Concept Cones and Representational Independence},
+  author  = {Wollschl{\"a}ger, Tom and Elstner, Jannes and Geisler, Simon and Cohen-Addad, Vincent and G{\"u}nnemann, Stephan and Gasteiger, Johannes},
+  journal = {arXiv preprint arXiv:2502.17420},
   year    = {2025}
 }
+
+@article{zhao2026llms,
+  title   = {LLMs Encode Harmfulness and Refusal Separately},
+  author  = {Zhao, Jiachen and Huang, Jing and Wu, Zhengxuan and Bau, David and Shi, Weiyan},
+  journal = {Advances in Neural Information Processing Systems},
+  volume  = {38},
+  pages   = {140283--140318},
+  year    = {2026}
+}
+
+@inproceedings{li2025revisiting,
+  title     = {Revisiting Jailbreaking for Large Language Models: A Representation Engineering Perspective},
+  author    = {Li, Tianlong and Wang, Zhenghua and Liu, Wenhao and Wu, Muling and Dou, Shihan and Lv, Changze and Wang, Xiaohua and Zheng, Xiaoqing and Huang, Xuan-Jing},
+  booktitle = {Proceedings of the 31st International Conference on Computational Linguistics},
+  pages     = {3158--3178},
+  year      = {2025}
+}
+
+@article{xu2024uncovering,
+  title   = {Uncovering Safety Risks of Large Language Models through Concept Activation Vector},
+  author  = {Xu, Zhihao and Huang, Ruixuan and Chen, Changyu and Wang, Xiting},
+  journal = {Advances in Neural Information Processing Systems},
+  volume  = {37},
+  pages   = {116743--116782},
+  year    = {2024}
+}
+
+@inproceedings{wang2025surgical,
+  title     = {Surgical, Cheap, and Flexible: Mitigating False Refusal in Language Models via Single Vector Ablation},
+  author    = {Wang, Xinpeng and Hu, Chengzhi Martin and R{\"o}ttger, Paul and Plank, Barbara},
+  booktitle = {International Conference on Learning Representations},
+  volume    = {2025},
+  pages     = {33824--33843},
+  year      = {2025}
+}
+
+@inproceedings{piras2026som,
+  title     = {SOM Directions Are Better Than One: Multi-Directional Refusal Suppression in Language Models},
+  author    = {Piras, Giorgio and Mura, Raffaele and Brau, Fabio and Oneto, Luca and Roli, Fabio and Biggio, Battista},
+  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume    = {40},
+  number    = {39},
+  pages     = {32728--32736},
+  year      = {2026}
+}
+
+% ── Jailbreak Attacks ─────────────────────────────────────────────────────────
+
+@article{wei2023jailbroken,
+  title   = {Jailbroken: How Does LLM Safety Training Fail?},
+  author  = {Wei, Alexander and Haghtalab, Nika and Steinhardt, Jacob},
+  journal = {Advances in Neural Information Processing Systems},
+  volume  = {36},
+  pages   = {80079--80110},
+  year    = {2023}
+}
+
+@article{zou2023universal,
+  title   = {Universal and Transferable Adversarial Attacks on Aligned Language Models},
+  author  = {Zou, Andy and Wang, Zifan and Carlini, Nicholas and Nasr, Milad and Kolter, J. Zico and Fredrikson, Matt},
+  journal = {arXiv preprint arXiv:2307.15043},
+  year    = {2023}
+}
+
+% ── Multilingual Safety ───────────────────────────────────────────────────────
+
+@article{yong2023low,
+  title   = {Low-Resource Languages Jailbreak GPT-4},
+  author  = {Yong, Zheng-Xin and Menghini, Cristina and Bach, Stephen H.},
+  journal = {arXiv preprint arXiv:2310.02446},
+  year    = {2023}
+}
+
+@inproceedings{deng2024multilingual,
+  title     = {Multilingual Jailbreak Challenges in Large Language Models},
+  author    = {Deng, Yue and Zhang, Wenxuan and Pan, Sinno Jialin and Bing, Lidong},
+  booktitle = {International Conference on Learning Representations},
+  pages     = {24634--24651},
+  year      = {2024}
+}
+
+@inproceedings{shen2024language,
+  title     = {The Language Barrier: Dissecting Safety Challenges of LLMs in Multilingual Contexts},
+  author    = {Shen, Lingfeng and Tan, Weiting and Chen, Sihao and Chen, Yunmo and Zhang, Jingyu and Xu, Haoran and Zheng, Boyuan and Koehn, Philipp and Khashabi, Daniel},
+  booktitle = {Findings of the Association for Computational Linguistics: ACL 2024},
+  pages     = {2668--2680},
+  year      = {2024}
+}
+
+@inproceedings{wang2024all,
+  title     = {All Languages Matter: On the Multilingual Safety of LLMs},
+  author    = {Wang, Wenxuan and Tu, Zhaopeng and Chen, Chang and Yuan, Youliang and Huang, Jen-tse and Jiao, Wenxiang and Lyu, Michael},
+  booktitle = {Findings of the Association for Computational Linguistics: ACL 2024},
+  pages     = {5865--5877},
+  year      = {2024}
+}
+
+@inproceedings{krasnodkebska2026safety,
+  title     = {Safety of Large Language Models Beyond English: A Systematic Literature Review of Risks, Biases, and Safeguards},
+  author    = {Krasnod{\k{e}}bska, Aleksandra and Dziewulska, Katarzyna and Seweryn, Karolina and Chrabaszcz, Maciej and Kusa, Wojciech},
+  booktitle = {Proceedings of the 19th Conference of the European Chapter of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  pages     = {1003--1034},
+  year      = {2026}
+}
+
+@article{atil2025methods,
+  title   = {Do Methods to Jailbreak and Defend LLMs Generalize Across Languages?},
+  author  = {Atil, Berk and Passonneau, Rebecca J. and Morstatter, Fred},
+  journal = {arXiv preprint arXiv:2511.00689},
+  year    = {2025}
+}
+
+@article{aziz2026low,
+  title   = {Low-Resource Safety Failures Are Action Failures, Not Representation Failures},
+  author  = {Aziz, Rashad and Hanif, Ikhlasul Akmal and Koto, Fajri},
+  journal = {arXiv preprint arXiv:2606.01196},
+  year    = {2026}
+}
+
+@article{verma2025hidden,
+  title   = {The Hidden Space of Safety: Understanding Preference-Tuned LLMs in Multilingual Context},
+  author  = {Verma, Nikhil and Bharadwaj, Manasa},
+  journal = {arXiv preprint arXiv:2504.02708},
+  year    = {2025}
+}
+
+% ── Models ────────────────────────────────────────────────────────────────────
 
 @article{qwen25,
   title   = {Qwen2.5 Technical Report},

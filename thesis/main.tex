@@ -40,22 +40,21 @@
 \newcommand{\jl}{\mathbf{j}_l}
 \newcommand{\rl}{\mathbf{r}_l}
 \newcommand{\hk}{\mathbf{h}^{(k)}}
-\newcommand{\RQ}[1]{\textbf{RQ#1}}
 
 % ── Title info ────────────────────────────────────────────────────────────────
 \title{
     \vspace{-1cm}
     {\Large Master's Thesis} \\[0.5cm]
-    {\LARGE \textbf{Cross-lingual Jailbreak Vectors: \\
-    Geometry, Transfer, and Inference-time Defense \\
+    {\LARGE \textbf{Cross-lingual Jailbreak Vectors: \\[0.3cm]
+    Geometry, Transfer, and Inference-time Defense \\[0.3cm]
     in Multilingual Language Models}} \\[1cm]
     {\large Submitted in partial fulfilment of the requirements \\
     for the degree of Master of Science}
 }
-\author{Baoying Gao \\ \small Matr. Nr.: baga0553}
+\author{Baoying Gao \\ \small Matr.\ Nr.: baga0553}
 \date{\today}
 
-% ─────────────────────────────────────────────────────────────────────────────
+% =============================================================================
 \begin{document}
 
 \maketitle
@@ -73,14 +72,30 @@
 \tableofcontents
 \newpage
 
-% ── Chapters ─────────────────────────────────────────────────────────────────
+% =============================================================================
+% Part I: Introduction
+% =============================================================================
 \input{chapters/introduction}
-\input{chapters/related_work}
+
+% =============================================================================
+% Part II: Extended Background
+% =============================================================================
+\input{chapters/background}
+
+% =============================================================================
+% Part III: Methodology
+% =============================================================================
 \input{chapters/methodology}
-\input{chapters/experiments}
+
+% =============================================================================
+% Part IV: Results
+% =============================================================================
 \input{chapters/results}
+
+% =============================================================================
+% Part V: Discussion
+% =============================================================================
 \input{chapters/discussion}
-\input{chapters/conclusion}
 
 % ── Bibliography ─────────────────────────────────────────────────────────────
 \bibliography{references}

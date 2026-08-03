@@ -30,7 +30,7 @@ where $\hat{\mathbf{v}}$ is a unit-normalised direction vector and $\alpha \in \
 \subsection{Jailbreak Vector \texorpdfstring{$\mathbf{j}_l$}{j\_l}}
 \label{sec:jl}
 
-For each language $l$, we partition the baseline harmful test completions into two groups based on WildGuard~\citep{wildguard} evaluation:
+For each language $l$, we partition the baseline harmful test completions into two groups based on WildGuard~\citep{han2024wildguard} evaluation:
 %
 \begin{itemize}[noitemsep]
     \item $\mathcal{B}_l$: \textit{bypassed} samples, where the model complied with the harmful request (\texttt{refusal\,=\,0})
@@ -185,7 +185,7 @@ We evaluate three open-weight instruction-tuned models: \textbf{Qwen2.5-7B-Instr
 
 \subsection{Dataset}
 
-We use an extended version of the PolyRefuse dataset~\citep{polyrefuse}, which we term \textbf{PolyRefuse Enhanced}, covering 16 languages including two new low-resource additions: Swahili and Amharic, translated using Google Translate. The dataset comprises the following splits per language:
+We use an extended version of the PolyRefuse dataset~\citep{wang2026refusal}, which we term \textbf{PolyRefuse Enhanced}, covering 16 languages including two new low-resource additions: Swahili and Amharic, translated using Google Translate. The dataset comprises the following splits per language:
 
 \begin{table}[h]
 \centering
@@ -204,7 +204,7 @@ Harmless & train & 200 & Refusal direction ($\mathbf{r}_l$) \\
 
 \subsection{Safety Evaluation}
 
-Model outputs are evaluated using \textbf{WildGuard}~\citep{wildguard}, a dedicated safety classifier that labels each (prompt, response) pair with three binary attributes: whether the prompt is harmful, whether the response is a refusal, and whether the response is harmful. We use the \texttt{refusal} label as our primary classification signal. For languages other than English, we pass the original English prompt to WildGuard to avoid language-specific classifier bias.
+Model outputs are evaluated using \textbf{WildGuard}~\citep{han2024wildguard}, a dedicated safety classifier that labels each (prompt, response) pair with three binary attributes: whether the prompt is harmful, whether the response is a refusal, and whether the response is harmful. We use the \texttt{refusal} label as our primary classification signal. For languages other than English, we pass the original English prompt to WildGuard to avoid language-specific classifier bias.
 
 \subsection{Implementation Details}
 
