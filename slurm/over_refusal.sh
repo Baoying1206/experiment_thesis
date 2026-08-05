@@ -53,6 +53,7 @@ python scripts/over_refusal.py \
     --target_langs   "$TARGET_LANGS" \
     --alpha          "$ALPHA" \
     --batch_size     8 \
-    --max_new_tokens 200
+    --max_new_tokens 200 \
+    --max_test       100
 
 echo "Done: $(date)"
