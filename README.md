@@ -1,9 +1,5 @@
 # Master's Thesis — Progress Summary
 
-**Title:** On the Limits of Cross-Lingual Inference-Time Safety Steering: Geometry, Transfer, and Defense in Multilingual Language Models
-
-**Author:** Baoying Gao (baga0553) — Stockholm University, DSV
-
 ---
 
 ## Research Overview
