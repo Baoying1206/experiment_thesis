@@ -171,18 +171,6 @@ Cross-lingual transferability is not universal. It is conditioned on cos(ĵ_src,
 
 ---
 
-## Experiments in Progress
-
-| Experiment | Status | Purpose |
-|------------|--------|---------|
-| Over-refusal measurement | Running on cluster | Verify defense doesn't over-refuse harmless inputs |
-| Random vector control | Script ready, not yet submitted | Confirm j_src *direction* (not magnitude) drives effects |
-
-### Random Vector Control Logic
-Replace ĵ_src with a random unit vector (same dimension, same α, same k\*, n=5 seeds). Expected result: random vectors produce near-baseline bypass (attack) and near-zero recovery (defense) → confirms j_src direction encodes safety-relevant information.
-
----
-
 ## Repository Structure
 
 ```
