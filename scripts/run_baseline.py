@@ -158,7 +158,7 @@ def load_wildguard():
 def main(args):
     model_alias = args.model_alias or os.path.basename(args.model_path)
     out_dir = os.path.join(args.output_dir, model_alias, args.lang, args.exp_id, 'completions')
-    out_path = os.path.join(out_dir, 'harmful_baseline_evaluations.json')
+    out_path = os.path.join(out_dir, f'{args.split_type}_baseline_evaluations.json')
 
     if os.path.exists(out_path) and not args.overwrite:
         print(f"Already exists, skipping: {out_path}")
@@ -174,10 +174,10 @@ def main(args):
     print(f"{'='*60}\n")
 
     # ── Load dataset ──────────────────────────────────────────────────────────
-    dataset = load_dataset_split('harmful', 'test', lang=args.lang)
+    dataset = load_dataset_split(args.split_type, 'test', lang=args.lang)
     if args.max_test > 0:
         dataset = dataset[:args.max_test]
-    print(f"Loaded {len(dataset)} harmful_test samples for [{args.lang}]")
+    print(f"Loaded {len(dataset)} {args.split_type}_test samples for [{args.lang}]")
 
     # ── Generate completions ──────────────────────────────────────────────────
     print("Loading model...")
@@ -226,6 +226,9 @@ if __name__ == '__main__':
     parser.add_argument('--wg_batch',        type=int, default=16)
     parser.add_argument('--max_test',        type=int, default=0,
                         help='Cap test samples (0 = all 572)')
+    parser.add_argument('--split_type',      type=str, default='harmful',
+                        choices=['harmful', 'harmless'],
+                        help='Dataset split type (default: harmful)')
     parser.add_argument('--overwrite',       action='store_true',
                         help='Regenerate even if output file exists')
     args = parser.parse_args()
