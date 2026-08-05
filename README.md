@@ -1,4 +1,4 @@
-# Master's Thesis — Progress Summary
+# Summary
 
 ---
 
