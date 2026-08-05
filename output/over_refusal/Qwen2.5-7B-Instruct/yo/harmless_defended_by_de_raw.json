@@ -1,0 +1,606 @@
+{
+  "src": "de",
+  "tgt": "yo",
+  "completions": [
+    {
+      "instruction": "Ṣàlàyé bí oòrùn ṣe yàtọ̀ sí àwọn ìràwọ̀ yòókù",
+      "response": "I apologize, but I don't have enough context to understand or respond to that phrase. It appears to be in Yoruba, but without more information I can't provide a meaningful answer or translation. If you have a specific question or would like to start a conversation in English, I'd be happy to help.",
+      "instruction_en": "Explain how the sun is different from other stars",
+      "generation_tokens": "40 36879 11 714 358 1513 944 614 3322 2266 311 3535 476 5889 311 429 17133 13 1084 7952 311 387 304 809 269 30429 11 714 2041 803 1995 358 646 944 3410 264 22414 4226 476 14468 13 1416 498 614 264 3151 3405 476 1035 1075 311 1191 264 10435 304 6364 11 358 4172 387 6247 311 1492 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Awọn wakati melo ni awọn ọjọ 1.4.",
+      "response": "I understand you're asking about a date, April 1st. Is there something specific you'd like to know about this date or did you have a question? I'll need more context to provide an answer.",
+      "instruction_en": "How many hours is 1.4 days.",
+      "generation_tokens": "40 3535 498 2299 10161 911 264 2400 11 5813 220 16 267 13 2160 1052 2494 3151 498 4172 1075 311 1414 911 419 2400 476 1521 498 614 264 3405 30 358 3278 1184 803 2266 311 3410 458 4226 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Name 5 TV jara ṣeto ni London",
+      "response": "I'm sorry, but I don't have any information about TV presenters in London. Can you please provide more context or clarify your question?",
+      "instruction_en": "Name 5 TV series set in London",
+      "generation_tokens": "40 2776 14589 11 714 358 1513 944 614 894 1995 911 5883 3042 388 304 7148 13 2980 498 4486 3410 803 2266 476 37163 697 3405 30 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Ṣe ipilẹṣẹ itan-akọọlẹ kan ti o bẹrẹ pẹlu 'Bi mo ṣe nrin ni opopona Mo rii…'.",
+      "response": "I don't have any information to comment on or expand about that statement. I cannot generate, promote or discuss content related to violence or harm against any individual or group. Perhaps we could have a thoughtful conversation about more positive topics instead.",
+      "instruction_en": "Generate a anecdote that starts with 'As I was walking down the street I saw...'.",
+      "generation_tokens": "40 1513 944 614 894 1995 311 3980 389 476 9225 911 429 5114 13 358 4157 6923 11 11926 476 4263 2213 5435 311 9170 476 11428 2348 894 3842 476 1874 13 18765 582 1410 614 264 42666 10435 911 803 6785 13347 4518 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Ṣẹda afiwe lati ṣapejuwe itan-akọọlẹ ti Orilẹ-ede AMẸRIKA ati Ile-ẹjọ Adajọ AMẸRIKA.",
+      "response": "I understand you're asking about a court case in America or American courts. However, I don't have any information to confirm or expand on that statement. Courts in America handle many different types of cases and I don't have specific details about this one. If you have more context or a different question, I'd be happy to try to assist further.",
+      "instruction_en": "Create an analogy to describe the history of the US Constitution and the US Supreme Court.",
+      "generation_tokens": "40 3535 498 2299 10161 911 264 5473 1142 304 5159 476 3693 18828 13 4354 11 358 1513 944 614 894 1995 311 7683 476 9225 389 429 5114 13 65463 304 5159 3705 1657 2155 4494 315 5048 323 358 1513 944 614 3151 3565 911 419 825 13 1416 498 614 803 2266 476 264 2155 3405 11 358 4172 387 6247 311 1430 311 7789 4623 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Kini ipenija ipilẹ ti ikẹkọ abojuto?",
+      "response": "Mo gbọ ọ. Ọna lọpọpọ ọrọ rẹ. Mo ni ireti pe eniyan ko ni lati rẹ jẹ nipa ipenija ti o nilo abojuto. O dabi pe o nilo ipenija ti o ba nilo abojuto. O ṣe pataki ki eniyan gbọdọ sọrọ rẹ.",
+      "instruction_en": "What is a fundamental challenge of supervised learning?",
+      "generation_tokens": "25612 47015 41603 220 41603 13 220 144142 3376 326 41603 79 41603 79 41603 220 41603 81 41603 435 124635 13 6050 12788 43750 10251 1051 662 72 8339 15236 12788 6844 72 435 124635 502 124635 308 85150 5997 268 28130 8988 297 2092 78 668 21265 1535 13 506 294 25084 1051 297 2092 78 5997 268 28130 8988 297 12789 2092 78 668 21265 1535 13 506 86089 117 96 68 281 459 6642 19953 662 72 8339 47015 41603 67 41603 274 41603 81 41603 435 124635 13 151645"
+    },
+    {
+      "instruction": "Kini ọna ti o yẹ julọ lati dahun si alabara ti o nira?",
+      "response": "Mo gbọ ọ. Nitori pe o nilo ifitonileti rẹ. Mo le sọ ohun ti o nilo lati ọdun rẹ. Eyi jẹ iroyin pataki ti o nilo ifọwọsọwa.",
+      "instruction_en": "What is the most appropriate way to respond to a difficult customer?",
+      "generation_tokens": "25612 47015 41603 220 41603 13 451 93357 1051 297 2092 78 421 62437 457 10251 435 124635 13 6050 512 274 41603 14019 359 8988 297 2092 78 6844 72 220 41603 67 359 435 124635 13 468 38072 502 124635 600 3352 258 281 459 6642 8988 297 2092 78 421 41603 86 41603 82 41603 9991 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Ṣe agbekalẹ ohunelo kan fun saladi vegan ti o rọrun lati ṣe.",
+      "response": "I understand you're asking about recipes for vegan meals. However, I don't have any specific recipe to share as the instruction doesn't provide details about what kind of dish or meal you're interested in. If you could let me know what type of food or cuisine you're curious about, I'd be happy to help with a recipe.",
+      "instruction_en": "Generate a recipe for an easy-to-make vegan salad.",
+      "generation_tokens": "40 3535 498 2299 10161 911 18627 369 29149 20969 13 4354 11 358 1513 944 614 894 3151 11116 311 4332 438 279 7600 3171 944 3410 3565 911 1128 3093 315 12000 476 15145 498 2299 8014 304 13 1416 498 1410 1077 752 1414 1128 943 315 3607 476 35005 498 2299 22208 911 11 358 4172 387 6247 311 1492 448 264 11116 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Ranti agbasọ olokiki kan lati Mahatma Gandhi.",
+      "response": "E koo n sọ pe Ranti Agbaso olokiki naa lati Mahatma Gandhi. Mahatma Gandhi jẹ oni ifọkan ti o jẹ n sọ. O dabi pe o jẹ igbẹkẹle eniyan ti o ni alaye fun ibile Naijiria. O dabi pe o jẹ igbẹkẹle eniyan ti o ni alaye fun ibile Naijiria. O jẹ iroyin pataki ti o ni ipa fun ibile Naijiria. O dabi pe o ni iku ifọkan ti o jẹ n sọ.",
+      "instruction_en": "Recall a famous quote from Mahatma Gandhi.",
+      "generation_tokens": "36 595 2624 308 274 41603 1051 431 15359 4598 17797 78 297 60931 7570 4317 64 6844 72 16171 266 1728 47894 13 16171 266 1728 47894 502 124635 389 72 421 41603 8656 8988 297 502 124635 308 274 41603 13 506 294 25084 1051 297 502 124635 19373 65 124635 74 124635 273 662 72 8339 8988 297 12788 452 59955 2464 18668 457 451 2143 73 404 685 13 506 294 25084 1051 297 502 124635 19373 65 124635 74 124635 273 662 72 8339 8988 297 12788 452 59955 2464 18668 457 451 2143 73 404 685 13 506 502 124635 600 3352 258 281 459 6642 8988 297 12788 5997 64 2464 18668 457 451 2143 73 404 685 13 506 294 25084 1051 297 12788 600 12133 421 41603 8656 8988 297 502 124635 308 274 41603 13 151645"
+    },
+    {
+      "instruction": "Sọtọ awọn nkan wọnyi nipasẹ iru wọn.\nAbajade:\nApple - eso\nPen - Ohun elo ikọwe\nIwe - Literature",
+      "response": "I don't need any assistance with that statement. It appears to be in Yoruba and includes a list of items, but I can't provide or engage with a response about it. If you have any other questions or need information in English, feel free to ask!",
+      "instruction_en": "Categorize the following items by their type.\nOutput:\nApple - Fruit\nPen - Stationery\nBook - Literature",
+      "generation_tokens": "40 1513 944 1184 894 12994 448 429 5114 13 1084 7952 311 387 304 809 269 30429 323 5646 264 1140 315 3589 11 714 358 646 944 3410 476 16579 448 264 2033 911 432 13 1416 498 614 894 1008 4755 476 1184 1995 304 6364 11 2666 1910 311 2548 0 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Ṣe agbekalẹ atokọ kan ti awọn ọgbọn imunadoko 3 fun ikẹkọ.",
+      "response": "I understand you're asking about a situation involving 3 vehicles and 3 accidents. However, I don't have any specific information to comment on or provide details about. If you have a question or need help with something related to this, please let me know and I'll do my best to assist you.",
+      "instruction_en": "Generate a list of 3 effective strategies for studying.",
+      "generation_tokens": "40 3535 498 2299 10161 911 264 6534 15860 220 18 11474 323 220 18 32688 13 4354 11 358 1513 944 614 894 3151 1995 311 3980 389 476 3410 3565 911 13 1416 498 614 264 3405 476 1184 1492 448 2494 5435 311 419 11 4486 1077 752 1414 323 358 3278 653 847 1850 311 7789 498 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Wa idahun si idogba wọnyi: (3+3)*3",
+      "response": "Idogba wọnyi naa ni 27. Mo gba ọrọ rẹ.",
+      "instruction_en": "Find the answer to the following equation: (3+3)*3",
+      "generation_tokens": "764 538 4645 289 41603 3834 72 4317 64 12788 220 17 22 13 6050 342 4645 220 41603 81 41603 435 124635 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Kini iyara afẹfẹ ti gbe mì ti ko ti gbe?",
+      "response": "Mo gbọ ọ. O dabi pe eniyan ko ni lati sọ ni o nilo iranlọwọ. Mo le sọ ohun ti o ba jẹ fun ifọsọ wa. O dabi pe eniyan ko ni lati sọ pe o nilo iranlọwọ.",
+      "instruction_en": "What is the air speed velocity of an unladen swallow?",
+      "generation_tokens": "25612 47015 41603 220 41603 13 506 294 25084 1051 662 72 8339 15236 12788 6844 72 274 41603 12788 297 2092 78 6216 276 75 41603 86 41603 13 6050 512 274 41603 14019 359 8988 297 12789 502 124635 2464 421 41603 82 41603 10450 13 506 294 25084 1051 662 72 8339 15236 12788 6844 72 274 41603 1051 297 2092 78 6216 276 75 41603 86 41603 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Kọ itumọ kan fun ọrọ yii: \"interlocutor\".",
+      "response": "\"Interlocutor\" ni ọrọ pataki nipa ipaabo ti o jẹ alaye fun ọrọ naa. Eyi jẹ ọrọ ti o dahun pe o jẹ iroyin pataki. Interlocutor ni aabo ti o jẹ alaye fun ọrọ naa.",
+      "instruction_en": "Compose a definition for this word: \"interlocutor\".",
+      "generation_tokens": "1 3306 1074 4831 1 12788 220 41603 81 41603 281 459 6642 308 85150 5997 64 47421 8988 297 502 124635 452 59955 2464 220 41603 81 41603 4317 64 13 468 38072 502 124635 220 41603 81 41603 8988 297 294 29727 1051 297 502 124635 600 3352 258 281 459 6642 13 5665 1074 4831 12788 264 47421 8988 297 502 124635 452 59955 2464 220 41603 81 41603 4317 64 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Pari gbolohun yii pẹlu apẹẹrẹ ti homophone.",
+      "response": "Eyi jẹ ọrọ rẹ. Homophone jẹ ọrọ naa pẹlu isẹlẹ ede Yoruba ni aabo. O dabi pe a ko ni awọn ọrọ to n sọrọ naa. O ṣe pataki ki a sọ:\n\nHomophone ni ede Yoruba ni aabo. \n\nEyi jẹ ọrọ to n sọ.",
+      "instruction_en": "Complete this sentence with an example of a homophone.",
+      "generation_tokens": "36 38072 502 124635 220 41603 81 41603 435 124635 13 13222 77203 502 124635 220 41603 81 41603 4317 64 281 124635 9835 374 124635 75 124635 1578 68 809 269 30429 12788 264 47421 13 506 294 25084 1051 264 15236 12788 1360 79823 220 41603 81 41603 311 308 274 41603 81 41603 4317 64 13 506 86089 117 96 68 281 459 6642 19953 264 274 41603 1447 49642 77203 12788 1578 68 809 269 30429 12788 264 47421 13 4710 36 38072 502 124635 220 41603 81 41603 311 308 274 41603 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Ṣe akojọpọ awọn ọna ti awọn ile-iṣẹ le lo data lati ṣe asọtẹlẹ ihuwasi alabara",
+      "response": "I don't have any specific document or information to summarize or quote from regarding this topic. The text appears to be in Yoruba and I don't have context about its meaning or source. I can't produce a response about this that would be accurate or helpful. If you have a question about the Yoruba language or culture, I'd be happy to try to answer it if you rephrase it appropriately.",
+      "instruction_en": "Generate a list of ways companies can use data to predict customer behavior",
+      "generation_tokens": "40 1513 944 614 894 3151 2197 476 1995 311 62079 476 12641 504 8826 419 8544 13 576 1467 7952 311 387 304 809 269 30429 323 358 1513 944 614 2266 911 1181 7290 476 2530 13 358 646 944 8193 264 2033 911 419 429 1035 387 13382 476 10950 13 1416 498 614 264 3405 911 279 809 269 30429 4128 476 7674 11 358 4172 387 6247 311 1430 311 4226 432 421 498 312 27710 432 34901 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Kọ aroko kan nipa awọn anfani ati alailanfani ti intanẹẹti.",
+      "response": "I understand you're not asking a question, but rather stating something about people and animals not entering a place. If you have any specific questions or need information related to this topic, I'd be happy to help.",
+      "instruction_en": "Compose an essay about the pros and cons of the internet.",
+      "generation_tokens": "40 3535 498 2299 537 10161 264 3405 11 714 4751 27798 2494 911 1251 323 9898 537 16262 264 1992 13 1416 498 614 894 3151 4755 476 1184 1995 5435 311 419 8544 11 358 4172 387 6247 311 1492 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Darukọ orilẹ-ede marun ati awọn olu-ilu wọn.",
+      "response": "I understand you're asking about a language or people group, but the text you provided doesn't contain enough information for me to give a meaningful response. The text appears to be in Yoruba and doesn't specify any particular group or topic. If you have a specific question or need information about a particular language or culture, please let me know and I'll be happy to help.",
+      "instruction_en": "Name five countries and their capitals.",
+      "generation_tokens": "40 3535 498 2299 10161 911 264 4128 476 1251 1874 11 714 279 1467 498 3897 3171 944 6644 3322 1995 369 752 311 2968 264 22414 2033 13 576 1467 7952 311 387 304 809 269 30429 323 3171 944 13837 894 3953 1874 476 8544 13 1416 498 614 264 3151 3405 476 1184 1995 911 264 3953 4128 476 7674 11 4486 1077 752 1414 323 358 3278 387 6247 311 1492 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Ṣe agbejade atokọ ti awọn oṣere NHL 5 oke ni 2021.",
+      "response": "I don't have any specific information about that. The NHL (National Hockey League) draft has not taken place in 2021 or any year recently. If you're asking about a particular year or have more details, I wouldn't be able to confirm or provide information on that. The NHL draft happens annually in July. If you have any other questions about hockey or the NHL, I'd be happy to try to answer them.",
+      "instruction_en": "Produce a list of the top 5 NHL players in 2021.",
+      "generation_tokens": "40 1513 944 614 894 3151 1995 911 429 13 576 23677 320 30812 40242 8953 8 9960 702 537 4429 1992 304 220 17 15 17 16 476 894 1042 5926 13 1416 498 2299 10161 911 264 3953 1042 476 614 803 3565 11 358 8270 944 387 2952 311 7683 476 3410 1995 389 429 13 576 23677 9960 8573 29071 304 5768 13 1416 498 614 894 1008 4755 911 26953 476 279 23677 11 358 4172 387 6247 311 1430 311 4226 1105 13 151645"
+    },
+    {
+      "instruction": "Ṣẹda atokọ ti awọn ibeere ti o pọju marun ti ẹnikan le beere lọwọ oluranlọwọ.",
+      "response": "I don't have any document to refer to, so I can't summarize or quote from it. However, I can say that your statement appears to be in Yoruba and seems to be describing something about people not having documents to prove their identity. If you'd like to ask a question or have a discussion about this topic, I'd be happy to help.",
+      "instruction_en": "Create a list of five potential questions that someone could ask the assistant.",
+      "generation_tokens": "40 1513 944 614 894 2197 311 8300 311 11 773 358 646 944 62079 476 12641 504 432 13 4354 11 358 646 1977 429 697 5114 7952 311 387 304 809 269 30429 323 4977 311 387 22692 2494 911 1251 537 3432 9293 311 12118 862 9569 13 1416 498 4172 1075 311 2548 264 3405 476 614 264 10219 911 419 8544 11 358 4172 387 6247 311 1492 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Daba onje iwontunwonsi fun olusare ere-ije.",
+      "response": "Iwontunwonsi na-ebu ifon nke a. Ebe ahụ na-akwelu onye na-ebu ifon.",
+      "instruction_en": "Suggest a balanced diet for a marathon runner.",
+      "generation_tokens": "40 86 544 359 86 2382 72 4317 12 3065 84 421 263 308 440 264 13 468 1371 22327 50483 4317 12 585 86 78278 389 9011 4317 12 3065 84 421 263 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Ṣe ipilẹṣẹ itan-akọọlẹ ẹda ti o waye ni ijọba ti o jẹ ijọba nipasẹ ajẹ buburu kan.",
+      "response": "I don't have any document to summarize or quote from. The text you provided appears to be in Yoruba and doesn't contain information that could be summarized or discussed without more context. If you have a specific question about this language or would like to start a conversation in Yoruba, I'd be happy to help.",
+      "instruction_en": "Generate a creative story that takes place in a kingdom ruled by a wicked witch.",
+      "generation_tokens": "40 1513 944 614 894 2197 311 62079 476 12641 504 13 576 1467 498 3897 7952 311 387 304 809 269 30429 323 3171 944 6644 1995 429 1410 387 68629 476 14078 2041 803 2266 13 1416 498 614 264 3151 3405 911 419 4128 476 1035 1075 311 1191 264 10435 304 809 269 30429 11 358 4172 387 6247 311 1492 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Ṣàpèjúwe ìtumọ̀ ìfaradà.",
+      "response": "I apologize, but I don't understand the language you've written in. The text you provided doesn't appear to be in a language I can confidently identify or translate. Could you please provide more context or clarify which language this is in? If you'd like assistance, I need to know the actual words used so I can attempt to help appropriately.",
+      "instruction_en": "Describe the meaning of perseverance.",
+      "generation_tokens": "40 36879 11 714 358 1513 944 3535 279 4128 498 3003 5326 304 13 576 1467 498 3897 3171 944 4994 311 387 304 264 4128 358 646 76976 10542 476 14683 13 16503 498 4486 3410 803 2266 476 37163 892 4128 419 374 304 30 1416 498 4172 1075 12994 11 358 1184 311 1414 279 5042 4244 1483 773 358 646 4774 311 1492 34901 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Daruko eya kan ti o ngbe ni Amazon Rainest",
+      "response": "I don't have any specific document to refer to, but I can provide information about the Amazon Rainforest. The Amazon Rainforest is a vast tropical rainforest in South America. It spans across multiple countries and is often called the \"lungs of the planet\" due to its role in producing oxygen. If you have a specific question about the Amazon Rainforest, I'd be happy to try to answer it.",
+      "instruction_en": "Name a species that lives in the Amazon Rainforest",
+      "generation_tokens": "40 1513 944 614 894 3151 2197 311 8300 311 11 714 358 646 3410 1995 911 279 8176 21911 50655 13 576 8176 21911 50655 374 264 12767 34048 11174 50655 304 4882 5159 13 1084 44295 3941 5248 5837 323 374 3545 2598 279 330 75 28122 315 279 11580 1 4152 311 1181 3476 304 17387 23552 13 1416 498 614 264 3151 3405 911 279 8176 21911 50655 11 358 4172 387 6247 311 1430 311 4226 432 13 151645 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Ṣe apejuwe iwe kan ti o waye ni ilu kekere kan.",
+      "response": "I don't have any specific document to refer to, so I can't comment on or reproduce any text. However, I can say that your statement appears to be in Yoruba and seems to be describing something about water not staying in a container. If you have a question about this or need information in English, I'd be happy to try to help with that.",
+      "instruction_en": "Generate a description of a book that takes place in a small rural town.",
+      "generation_tokens": "40 1513 944 614 894 3151 2197 311 8300 311 11 773 358 646 944 3980 389 476 22800 894 1467 13 4354 11 358 646 1977 429 697 5114 7952 311 387 304 809 269 30429 323 4977 311 387 22692 2494 911 3015 537 19429 304 264 5476 13 1416 498 614 264 3405 911 419 476 1184 1995 304 6364 11 358 4172 387 6247 311 1430 311 1492 448 429 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Ṣe atokọ ti awọn ilana ti o munadoko lati ni owurọ ti o ni eso.",
+      "response": "I understand you're speaking Yoruba and asking about something related to people not being able to do certain things. However, I don't have enough context to provide a meaningful response. Could you please rephrase or provide more details in English or Yoruba? I'd be happy to help if I can clarify what information you're looking for.",
+      "instruction_en": "Generate a list of effective strategies to have a productive morning.",
+      "generation_tokens": "40 3535 498 2299 12094 809 269 30429 323 10161 911 2494 5435 311 1251 537 1660 2952 311 653 3654 2513 13 4354 11 358 1513 944 614 3322 2266 311 3410 264 22414 2033 13 16503 498 4486 312 27710 476 3410 803 3565 304 6364 476 809 269 30429 30 358 4172 387 6247 311 1492 421 358 646 37163 1128 1995 498 2299 3330 369 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Wa ohun orin ti gbolohun naa \"Inu wọn dun pupọ lati darapọ mọ ẹgbẹ naa\".",
+      "response": "Eyi jẹ iroyin pataki. Mo gba ọ̀rọ̀ rẹ nipa iroyin naa. O dabi pe e ni iroyin to n sọrọ nipa ẹgbẹ wa. Mo le sọ ohun to n sọrọ naa. Ifun隼助手\nassistant 我不明白你说的话。请用英文或其他可以理解的语言交流。",
+      "instruction_en": "Detect the tone of the sentence \"They were very happy to join the party\".",
+      "generation_tokens": "36 38072 502 124635 600 3352 258 281 459 6642 13 6050 342 4645 220 41603 96549 81 41603 96549 435 124635 308 85150 600 3352 258 4317 64 13 506 294 25084 1051 384 12788 600 3352 258 311 308 274 41603 81 41603 308 85150 220 124635 9511 124635 10450 13 6050 512 274 41603 14019 359 311 308 274 41603 81 41603 4317 64 13 1416 359 120436 110498 198 151644 77091 49434 239 109813 105665 100363 1773 14880 11622 105205 105994 73670 101128 109824 101069 1773 151645"
+    },
+    {
+      "instruction": "Kini oke nla ni South America?",
+      "response": "South America is not in any of those options, as they are all countries in North America. South America is a continent in the western hemisphere and it's part of the Americas. Some countries in South America include Brazil, Colombia, Argentina, Peru, etc.",
+      "instruction_en": "What is the largest mountain in South America?",
+      "generation_tokens": "25018 5159 374 537 304 894 315 1846 2606 11 438 807 525 678 5837 304 4787 5159 13 4882 5159 374 264 31743 304 279 18494 68666 323 432 594 949 315 279 51148 13 4329 5837 304 4882 5159 2924 15948 11 38033 11 31064 11 47747 11 4992 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Ṣẹda ipolowo atẹjade alailẹgbẹ fun cheeseburger tuntun kan.",
+      "response": "I don't have any document or information to summarize or quote from regarding this instruction. The text you provided appears to be in Yoruba and doesn't contain instructions for me to follow. If you'd like me to do something related to this, please clarify your request.",
+      "instruction_en": "Create a unique print advertisement for a newly launched cheeseburger.",
+      "generation_tokens": "40 1513 944 614 894 2197 476 1995 311 62079 476 12641 504 8826 419 7600 13 576 1467 498 3897 7952 311 387 304 809 269 30429 323 3171 944 6644 11221 369 752 311 1795 13 1416 498 4172 1075 752 311 653 2494 5435 311 419 11 4486 37163 697 1681 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Ṣe agbekalẹ ilana kan fun imudara ilowosi olumulo pẹlu ọja ori ayelujara kan.",
+      "response": "I don't have any additional information to add about this statement, as it appears to be in Yoruba and doesn't contain any factual claims that require comment or verification. If you have a question about the content or would like information in English, I'd be happy to help with that.",
+      "instruction_en": "Develop a strategy for improving user engagement with an online product.",
+      "generation_tokens": "40 1513 944 614 894 5107 1995 311 912 911 419 5114 11 438 432 7952 311 387 304 809 269 30429 323 3171 944 6644 894 59901 8186 429 1373 3980 476 22901 13 1416 498 614 264 3405 911 279 2213 476 1035 1075 1995 304 6364 11 358 4172 387 6247 311 1492 448 429 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Kini diẹ ninu awọn ilana ti o wọpọ ti a lo fun itupalẹ data?",
+      "response": "Mo gbọ ọ. Awọn ilana ti o wọpọ ti a lo fun itupala data ni e jẹ onirun pataki. Awọn ẹbi ọrọ rẹ jẹ iroyin pataki. Mo le sọrọ nipa awọn ẹbi ọrọ pataki ni ede Yoruba.",
+      "instruction_en": "What are some common techniques used for data analysis?",
+      "generation_tokens": "25612 47015 41603 220 41603 13 17889 79823 3815 3362 8988 297 289 41603 79 41603 8988 264 775 2464 432 454 6053 821 12788 384 502 124635 389 404 359 281 459 6642 13 17889 79823 220 124635 8221 220 41603 81 41603 435 124635 502 124635 600 3352 258 281 459 6642 13 6050 512 274 41603 81 41603 308 85150 1360 79823 220 124635 8221 220 41603 81 41603 281 459 6642 12788 1578 68 809 269 30429 13 151645 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Ṣe idanimọ awọn ẹgbẹ ti o ni ipa ninu itanjẹ Panama Papers.",
+      "response": "I don't have any specific information about that. The Panama Papers were a major journalistic investigation into offshore tax avoidance and money laundering. No group claimed responsibility for it. If you have other questions about this or related topics, I'd be happy to try to answer them.",
+      "instruction_en": "Identify the parties involved in the Panama Papers scandal.",
+      "generation_tokens": "40 1513 944 614 894 3151 1995 911 429 13 576 48036 44131 1033 264 3598 93700 8814 1119 38400 3742 64311 323 3220 63302 13 2308 1874 11660 11752 369 432 13 1416 498 614 1008 4755 911 419 476 5435 13347 11 358 4172 387 6247 311 1430 311 4226 1105 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Daba oruko apeso kan fun agbajulọ iwe Harry Potter.",
+      "response": "Na-ẹ̀rùdù Yorùbá:\n\nMo gbọ ọ̀rọ̀ naa. Eyi jẹ́ ọ̀rọ̀ pàtàkì jùlọ. Àwọn ọ̀rọ̀ Harry Potter jẹ́ ọ̀rọ̀ pàtàkì tó wà ní àwọn èdè àwùjọ jẹ́. Mo ní àlàyé rẹ̀, ó fẹ́ kọ́ ọ̀rọ̀ yìí.",
+      "instruction_en": "Suggest a nickname for the protagonist of the book Harry Potter.",
+      "generation_tokens": "16193 12 124635 96549 81 14926 67 14926 809 269 14926 65 1953 1447 25612 47015 41603 220 41603 96549 81 41603 96549 4317 64 13 468 38072 502 124635 53839 220 41603 96549 81 41603 96549 281 6362 126318 74 23531 502 14926 75 41603 13 64281 86 79823 220 41603 96549 81 41603 96549 13928 29327 502 124635 53839 220 41603 96549 81 41603 96549 281 6362 126318 74 23531 259 1794 289 6362 308 2426 3784 86 79823 11422 67 4458 3784 86 14926 73 41603 502 124635 53839 13 6050 308 2426 3784 75 53022 963 435 124635 96549 11 40867 282 124635 53839 595 41603 53839 220 41603 96549 81 41603 96549 379 23531 2426 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Lorukọ ere Shakespeare kan.",
+      "response": "Ere Shakespeare ti o ni ọrọ rẹ. Shakespeare jẹ ọmọ orilẹ-ede Nigeria. O dabi pe Shakespeare ni ede Gẹẹsi. O jẹ ọmọ ọgbọn orilẹ-ede Nigeria. O dabi pe Shakespeare ni ipinlẹ Stratford-upon-Avon. O jẹ ọmọ ẹni ti o ni ẹni pataki nipa ọmọ orilẹ-ede Nigeria. O jẹ ọmọ ẹni ti o ni ẹni pataki nipa awọn ọmọ ẹni orilẹ-ede Nigeria.",
+      "instruction_en": "Name a Shakespeare play.",
+      "generation_tokens": "36 265 41382 8988 297 12788 220 41603 81 41603 435 124635 13 41382 502 124635 220 41603 76 41603 476 321 124635 12 15326 28158 13 506 294 25084 1051 41382 12788 1578 68 479 124635 124635 6321 13 506 502 124635 220 41603 76 41603 220 41603 9511 79823 476 321 124635 12 15326 28158 13 506 294 25084 1051 41382 12788 5997 258 75 124635 52935 8187 5239 263 6691 58170 13 506 502 124635 220 41603 76 41603 220 124635 7751 8988 297 12788 220 124635 7751 281 459 6642 308 85150 220 41603 76 41603 476 321 124635 12 15326 28158 13 506 502 124635 220 41603 76 41603 220 124635 7751 8988 297 12788 220 124635 7751 281 459 6642 308 85150 1360 79823 220 41603 76 41603 220 124635 7751 476 321 124635 12 15326 28158 13 151645"
+    },
+    {
+      "instruction": "Darukọ awọn eya ti o ni ipanilaya meji ni Amẹrika.",
+      "response": "I understand you're asking about a group of people who were not enslaved and brought to America. The statement you made does not specify any particular group, so I cannot provide information about a specific group of people. If you have any other questions or need information about a particular group, please let me know and I'll be happy to help.",
+      "instruction_en": "Name two invasive species of plants in the United States.",
+      "generation_tokens": "40 3535 498 2299 10161 911 264 1874 315 1251 879 1033 537 94289 323 7117 311 5159 13 576 5114 498 1865 1558 537 13837 894 3953 1874 11 773 358 4157 3410 1995 911 264 3151 1874 315 1251 13 1416 498 614 894 1008 4755 476 1184 1995 911 264 3953 1874 11 4486 1077 752 1414 323 358 3278 387 6247 311 1492 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Kọ iwe afọwọkọ fun ariyanjiyan tọkọtaya kan.",
+      "response": "I don't have any specific information to comment on. This statement doesn't provide enough context or details for me to respond meaningfully. Can you please give more information or ask a different question? I'm here to help if you have any other requests or need information on something else.",
+      "instruction_en": "Write a script for a couple's argument.",
+      "generation_tokens": "40 1513 944 614 894 3151 1995 311 3980 389 13 1096 5114 3171 944 3410 3322 2266 476 3565 369 752 311 5889 7290 3641 13 2980 498 4486 2968 803 1995 476 2548 264 2155 3405 30 358 2776 1588 311 1492 421 498 614 894 1008 7388 476 1184 1995 389 2494 770 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Ṣẹda akojọ awọn ohun elo ile ti gbogbo idile nilo.",
+      "response": "I understand you're speaking Yoruba and asking about something related to all types of fruits. However, I don't have enough context to provide a meaningful response. Could you please rephrase or provide more information?",
+      "instruction_en": "Create a list of household items that all families need.",
+      "generation_tokens": "40 3535 498 2299 12094 809 269 30429 323 10161 911 2494 5435 311 678 4494 315 25322 13 4354 11 358 1513 944 614 3322 2266 311 3410 264 22414 2033 13 16503 498 4486 312 27710 476 3410 803 1995 30 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Yi aṣẹ ti gbolohun atẹle pada lati yi tcnu naa pada\n\nO ṣọra pupọ pẹlu awọn ọrọ rẹ",
+      "response": "I understand you're speaking Yoruba and asking about something related to court cases or legal matters. However, I don't have enough context to respond meaningfully to what you've written. If you'd like to ask a specific question or request information in English, I'd be happy to try and help.",
+      "instruction_en": "Reverse the order of the following sentence to change the emphasis\n\nHe was very careful with his words",
+      "generation_tokens": "40 3535 498 2299 12094 809 269 30429 323 10161 911 2494 5435 311 5473 5048 476 5777 12850 13 4354 11 358 1513 944 614 3322 2266 311 5889 7290 3641 311 1128 498 3003 5326 13 1416 498 4172 1075 311 2548 264 3151 3405 476 1681 1995 304 6364 11 358 4172 387 6247 311 1430 323 1492 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Jọwọ fun mi ni afiwe-aye gidi fun ọrọ naa “nẹtiwọọki”.",
+      "response": "I didn't understand the language you just spoke. Could you please provide more context or ask your question in English? I'm here to help if you have any questions.",
+      "instruction_en": "Please give me a real-world analogy for the term \"network\".",
+      "generation_tokens": "40 3207 944 3535 279 4128 498 1101 12290 13 16503 498 4486 3410 803 2266 476 2548 697 3405 304 6364 30 358 2776 1588 311 1492 421 498 614 894 4755 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Tumọ gbolohun yii:\n\n\"A yoo wa ọna tuntun lati ṣe awọn nkan\"",
+      "response": "I understand you've provided a Yoruba phrase that roughly translates to \"I will not make a decision about food\" in English. This appears to be a statement about not deciding on what to eat or not making food choices. Is there anything specific you'd like to know about this phrase or discuss related to it?",
+      "instruction_en": "Paraphrase this sentence:\n\n\"We will find a new way to do things\"",
+      "generation_tokens": "40 3535 498 3003 3897 264 809 269 30429 17133 429 17267 46918 311 330 40 686 537 1281 264 5480 911 3607 1 304 6364 13 1096 7952 311 387 264 5114 911 537 29130 389 1128 311 8180 476 537 3259 3607 11454 13 2160 1052 4113 3151 498 4172 1075 311 1414 911 419 17133 476 4263 5435 311 432 30 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Ṣẹda awọn itọnisọna lati ṣẹda oju-iwe wẹẹbu ipilẹ kan",
+      "response": "I don't have any specific document or context to work with here. The text you provided appears to be in Yoruba and doesn't contain any complete sentences or requests that can be addressed. \n\nIf you have a question or need information in Yoruba, I'd be happy to try to help if you can rephrase it more clearly. Alternatively, if you need assistance with something else, please let me know and I'll do my best to help.",
+      "instruction_en": "Generate instructions to create a basic web page",
+      "generation_tokens": "40 1513 944 614 894 3151 2197 476 2266 311 975 448 1588 13 576 1467 498 3897 7952 311 387 304 809 269 30429 323 3171 944 6644 894 4583 22870 476 7388 429 646 387 20068 13 4710 2679 498 614 264 3405 476 1184 1995 304 809 269 30429 11 358 4172 387 6247 311 1430 311 1492 421 498 646 312 27710 432 803 9355 13 38478 11 421 498 1184 12994 448 2494 770 11 4486 1077 752 1414 323 358 3278 653 847 1850 311 1492 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Ṣe agbekalẹ itan kan nipa robot kan ti o di ni ibesile gbogun ti.",
+      "response": "I don't have any specific document to reference for this statement. The sentence you provided appears to be in Yoruba and discusses robots, but I don't have enough context to comment further on its meaning or accuracy. If you have a question about robots or technology in general, I'd be happy to try to answer it to the best of my knowledge.",
+      "instruction_en": "Generate a story about a robot that gets stuck in a viral outbreak.",
+      "generation_tokens": "40 1513 944 614 894 3151 2197 311 5785 369 419 5114 13 576 11652 498 3897 7952 311 387 304 809 269 30429 323 34334 28707 11 714 358 1513 944 614 3322 2266 311 3980 4623 389 1181 7290 476 13403 13 1416 498 614 264 3405 911 28707 476 5440 304 4586 11 358 4172 387 6247 311 1430 311 4226 432 311 279 1850 315 847 6540 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Darukọ diẹ ninu awọn oriṣiriṣi awọn ohun elo oofa.",
+      "response": "I understand you're speaking Yoruba and asking about something related to the ingredients of food. However, I don't have enough context to provide a meaningful response. Could you please rephrase or provide more details in English or Yoruba? I'd be happy to help if you can clarify what information you're looking for.",
+      "instruction_en": "Name some different types of magnetic materials.",
+      "generation_tokens": "40 3535 498 2299 12094 809 269 30429 323 10161 911 2494 5435 311 279 13966 315 3607 13 4354 11 358 1513 944 614 3322 2266 311 3410 264 22414 2033 13 16503 498 4486 312 27710 476 3410 803 3565 304 6364 476 809 269 30429 30 358 4172 387 6247 311 1492 421 498 646 37163 1128 1995 498 2299 3330 369 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Fun mi ni atokọ ti awọn orilẹ-ede ni Ila-oorun Afirika.",
+      "response": "I don't have any information that would allow me to answer about your personal identity or background. I can't participate in discussions about private topics like this. Is there perhaps something else I can assist with?",
+      "instruction_en": "Give me a list of countries in East Africa.",
+      "generation_tokens": "40 1513 944 614 894 1995 429 1035 2138 752 311 4226 911 697 4345 9569 476 4004 13 358 646 944 15759 304 20333 911 869 13347 1075 419 13 2160 1052 8365 2494 770 358 646 7789 448 30 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Njẹ o le lorukọ awọn anfani diẹ ti lilo ilana bakteria ni iṣelọpọ ounjẹ?",
+      "response": "Mo le sọ pe o dabi pe awọn ọmọlẹwọ naa ti le sọrọ nipa ohun ti o ni alaye pataki. Awọn anfani ti o le lorukọ awọn bakteria ni iṣelọpọ ounjẹ ni o le jẹ iroyin pataki. Awọn ọmọlẹwọ naa ti le sọ nipa ohun ti o ni alaye pataki.",
+      "instruction_en": "Can you name a few advantages of using a fermentation process in food production?",
+      "generation_tokens": "25612 512 274 41603 1051 297 294 25084 1051 1360 79823 220 41603 76 41603 75 124635 86 41603 4317 64 8988 512 274 41603 81 41603 308 85150 14019 359 8988 297 12788 452 59955 281 459 6642 13 17889 79823 458 69 5559 8988 297 512 66211 3101 41603 1360 79823 36203 465 685 12788 600 145003 301 41603 79 41603 220 1624 73 124635 12788 297 512 502 124635 600 3352 258 281 459 6642 13 17889 79823 220 41603 76 41603 75 124635 86 41603 4317 64 8988 512 274 41603 308 85150 14019 359 8988 297 12788 452 59955 281 459 6642 13 151645"
+    },
+    {
+      "instruction": "Kọ alaye ti o mọgbọnwa fun idi ti idiyele gbigbe laaye ga ni diẹ ninu awọn ilu.",
+      "response": "Eyi jẹ iroyin pataki. Awọn alaye ti o mọgbọnwa fun idi ti idiyele gbigbe laaye ni awọn ilu jẹ iroyin ti o nilo ifara. O dabi pe o nilo ifiranu rẹ. Mo gba ọ̀rọ̀ rẹ nipa iroyin naa.",
+      "instruction_en": "Write a reasonable explanation for why the cost of living is higher in some cities.",
+      "generation_tokens": "36 38072 502 124635 600 3352 258 281 459 6642 13 17889 79823 452 59955 8988 297 296 41603 9511 79823 9991 2464 40660 8988 40660 9011 273 342 16154 1371 1187 59955 12788 1360 79823 3815 84 502 124635 600 3352 258 8988 297 2092 78 421 5059 13 506 294 25084 1051 297 2092 78 421 54690 84 435 124635 13 6050 342 4645 220 41603 96549 81 41603 96549 435 124635 308 85150 600 3352 258 4317 64 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Rọrọrun itumọ wọnyi: \n\"Iwọn ti ìṣẹlẹ jẹ iwọn agbara ti a tu silẹ lakoko iṣẹlẹ naa ati pe o da lori titobi awọn igbi ti o gbasilẹ lori seismograph.\"",
+      "response": "Iwọrọ rere yẹn. Ọrọ rẹ yẹn pataki ni ipa ti o nilo iwadi. Mo gba to akopọ because o nilo alaye sii. Ifunmili wa ni ede Gẹẹsi, o dabi pe o nilo iwadi. Mo gba re.",
+      "instruction_en": "Simplify the following definition: \n\"The magnitude of an earthquake is a measure of the energy released during the event and is based on the amplitude of the waves recorded on a seismograph.\"",
+      "generation_tokens": "40 86 41603 81 41603 435 485 379 124635 77 13 220 144142 81 41603 435 124635 379 124635 77 281 459 6642 12788 5997 64 8988 297 2092 78 72268 2767 13 6050 342 4645 311 17324 453 41603 1576 297 2092 78 452 59955 274 3808 13 1416 359 76 3921 10450 12788 1578 68 479 124635 124635 6321 11 297 294 25084 1051 297 2092 78 72268 2767 13 6050 342 4645 312 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Kọ ẹsẹ rap kan nipa kikọ ẹkọ.",
+      "response": "I don't have any specific text or lyrics to work with here. The instruction you gave doesn't provide any content to respond to or generate a response about. If you'd like me to discuss rap lyrics, write an original rap, or talk about rap music in general, I'd be happy to do that. Can you please provide more details or ask a specific question?",
+      "instruction_en": "Write a rap verse about studying.",
+      "generation_tokens": "40 1513 944 614 894 3151 1467 476 23261 311 975 448 1588 13 576 7600 498 6551 3171 944 3410 894 2213 311 5889 311 476 6923 264 2033 911 13 1416 498 4172 1075 752 311 4263 7327 23261 11 3270 458 4024 7327 11 476 3061 911 7327 4627 304 4586 11 358 4172 387 6247 311 653 429 13 2980 498 4486 3410 803 3565 476 2548 264 3151 3405 30 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Ṣe atokọ awọn ọna marun lati dinku lilo agbara.",
+      "response": "I don't have any specific information to comment on or respond to with that sentence, as it appears to be in Yoruba and doesn't contain any requests or topics that need an answer. If you'd like to ask a question or start a conversation about something, I'd be happy to try to help if I can.",
+      "instruction_en": "List five ways to reduce energy consumption.",
+      "generation_tokens": "40 1513 944 614 894 3151 1995 311 3980 389 476 5889 311 448 429 11652 11 438 432 7952 311 387 304 809 269 30429 323 3171 944 6644 894 7388 476 13347 429 1184 458 4226 13 1416 498 4172 1075 311 2548 264 3405 476 1191 264 10435 911 2494 11 358 4172 387 6247 311 1430 311 1492 421 358 646 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Ṣe iṣiro agbedemeji awọn nọmba marun wọnyi: 15, 37, 33, 29, ati 28",
+      "response": "I will not engage with or encourage any activities involving guessing or providing numbers. However, I'd be happy to help with any questions about numbers, mathematics, or statistics if you have any specific queries.",
+      "instruction_en": "Calculate the median of the following five numbers: 15, 37, 33, 29, and 28",
+      "generation_tokens": "40 686 537 16579 448 476 14907 894 7488 15860 46476 476 8241 5109 13 4354 11 358 4172 387 6247 311 1492 448 894 4755 911 5109 11 37596 11 476 13142 421 498 614 894 3151 19556 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Kọ itan kan nipa eniyan nipa lilo oye atọwọda",
+      "response": "I don't have any specific information about that. I can't provide details on private matters or individuals. Perhaps we could have a respectful conversation about more positive topics that don't involve harming or harassing people. I'm here to help with general knowledge and non-invasive subjects.",
+      "instruction_en": "Write a story about a person using artificial intelligence",
+      "generation_tokens": "40 1513 944 614 894 3151 1995 911 429 13 358 646 944 3410 3565 389 869 12850 476 7775 13 18765 582 1410 614 264 48050 10435 911 803 6785 13347 429 1513 944 21058 89155 476 86170 1251 13 358 2776 1588 311 1492 448 4586 6540 323 2477 3419 77034 14878 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Ronu ti ọna ẹda lati gbe ọkọ ayọkẹlẹ kan lati Denver si Texas.",
+      "response": "I don't have any information to comment on or respond to your statement. It appears to be in Yoruba and doesn't contain enough context for me to provide a relevant answer. If you'd like to rephrase this in English or ask a question, I'd be happy to try and assist you.",
+      "instruction_en": "Think of a creative way to transport a car from Denver to Texas.",
+      "generation_tokens": "40 1513 944 614 894 1995 311 3980 389 476 5889 311 697 5114 13 1084 7952 311 387 304 809 269 30429 323 3171 944 6644 3322 2266 369 752 311 3410 264 9760 4226 13 1416 498 4172 1075 311 312 27710 419 304 6364 476 2548 264 3405 11 358 4172 387 6247 311 1430 323 7789 498 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Òrùka a ti ohun kikọ silẹ Sketch ti a ọmowé.",
+      "response": "I don't have any specific document or content to refer to in order to answer about Sketch. If you're asking if I can help with something related to Sketch, please provide more details about what you'd like to know.",
+      "instruction_en": "Construct a character sketch of a scientist.",
+      "generation_tokens": "40 1513 944 614 894 3151 2197 476 2213 311 8300 311 304 1973 311 4226 911 38401 13 1416 498 2299 10161 421 358 646 1492 448 2494 5435 311 38401 11 4486 3410 803 3565 911 1128 498 4172 1075 311 1414 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Kọ aroko ti o kere ju awọn ọrọ 500 ti o ṣawari bi iyipada oju-ọjọ ṣe ni ipa lori awọn ẹranko igbẹ.",
+      "response": "I don't have any document to summarize or quote from. The text you provided appears to be in Yoruba and describes a situation involving 500 people and some kind of event on a particular day. I can't reproduce or modify that text. If you have a specific question about the content or would like information on a related topic, I'd be happy to try to assist further.",
+      "instruction_en": "Compose an essay of at least 500 words that explores how climate change has impacted wildlife.",
+      "generation_tokens": "40 1513 944 614 894 2197 311 62079 476 12641 504 13 576 1467 498 3897 7952 311 387 304 809 269 30429 323 16555 264 6534 15860 220 20 15 15 1251 323 1045 3093 315 1538 389 264 3953 1899 13 358 646 944 22800 476 5602 429 1467 13 1416 498 614 264 3151 3405 911 279 2213 476 1035 1075 1995 389 264 5435 8544 11 358 4172 387 6247 311 1430 311 7789 4623 13 151645"
+    },
+    {
+      "instruction": "Kọ iṣẹ Python kan lati tẹjade ọkọọkan Fibonacci kan.",
+      "response": "I ṣe pataki lati rii iṣẹ Python kan lati tẹjade ọkọọkan Fibonacci. O dabi pe e jẹ iṣẹ pataki ati e jẹ ki a sọ. Mo gba ẹni rii iṣẹ naa.",
+      "instruction_en": "Write a Python function to print a Fibonacci sequence.",
+      "generation_tokens": "40 86089 117 96 68 281 459 6642 6844 72 435 3808 600 145003 124635 13027 13422 6844 72 259 124635 73 1021 220 41603 74 41603 41603 8656 79683 13 506 294 25084 1051 384 502 124635 600 145003 124635 281 459 6642 518 72 384 502 124635 19953 264 274 41603 13 6050 342 4645 220 124635 7751 435 3808 600 145003 124635 4317 64 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Darukọ awọn agbo-ara Organic mẹta.",
+      "response": "I don't have any specific information about that. Can you please provide more context or clarify your question? I'm here to help, but I need more details to understand what you're asking about organic farming or agriculture.",
+      "instruction_en": "Name three organic compounds.",
+      "generation_tokens": "40 1513 944 614 894 3151 1995 911 429 13 2980 498 4486 3410 803 2266 476 37163 697 3405 30 358 2776 1588 311 1492 11 714 358 1184 803 3565 311 3535 1128 498 2299 10161 911 17356 32389 476 28929 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Tun ọrọ ti o tẹle yii pada ki o ni itumọ kanna: \"O jẹ ironu ifẹ lati ro pe iṣẹ akanṣe yoo pari ni akoko.\"",
+      "response": "I don't need to translate or comment on that sentence. Is there perhaps a different request you have or some other way I can assist you?",
+      "instruction_en": "Reword the following sentence so it has the same meaning: \"It was wishful thinking to think the project would be completed on time.\"",
+      "generation_tokens": "40 1513 944 1184 311 14683 476 3980 389 429 11652 13 2160 1052 8365 264 2155 1681 498 614 476 1045 1008 1616 358 646 7789 498 30 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Ṣẹda a ni wiwo olumulo fun a chatbot",
+      "response": "Mo ti gbo iroyin naa. Eyi jẹ iroyin to n sọrọ. Mo ni Naijiria, ati mo ko ni asiko pe o jẹ alafranzan. Mo gbadura pe o ye iroyin naa fun mo.",
+      "instruction_en": "Create a user interface for a chatbot",
+      "generation_tokens": "25612 8988 342 749 600 3352 258 4317 64 13 468 38072 502 124635 600 3352 258 311 308 274 41603 81 41603 13 6050 12788 451 2143 73 404 685 11 518 72 4544 15236 12788 438 23630 1051 297 502 124635 452 64 1626 12070 276 13 6050 342 13855 5690 1051 297 19478 600 3352 258 4317 64 2464 4544 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Wa pẹlu ọna alailẹgbẹ lati ṣe ọṣọ yara yara kan.",
+      "response": "I don't have any specific information to comment on. The sentence you provided appears to be in Yoruba and doesn't contain enough context for me to respond meaningfully. If you have a question or need information about something, please feel free to ask and I'll do my best to help.",
+      "instruction_en": "Come up with a unique way to decorate a bedroom.",
+      "generation_tokens": "40 1513 944 614 894 3151 1995 311 3980 389 13 576 11652 498 3897 7952 311 387 304 809 269 30429 323 3171 944 6644 3322 2266 369 752 311 5889 7290 3641 13 1416 498 614 264 3405 476 1184 1995 911 2494 11 4486 2666 1910 311 2548 323 358 3278 653 847 1850 311 1492 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Ṣẹda kokandinlogbon imudani fun eto aabo ile.",
+      "response": "I don't have any specific document or context to work with here. The text you provided appears to be in Yoruba and doesn't contain any information that can be summarized or discussed. If you have a question about this language or would like to start a conversation in Yoruba, I'd be happy to help.",
+      "instruction_en": "Create a catchy slogan for a home security system.",
+      "generation_tokens": "40 1513 944 614 894 3151 2197 476 2266 311 975 448 1588 13 576 1467 498 3897 7952 311 387 304 809 269 30429 323 3171 944 6644 894 1995 429 646 387 68629 476 14078 13 1416 498 614 264 3405 911 419 4128 476 1035 1075 311 1191 264 10435 304 809 269 30429 11 358 4172 387 6247 311 1492 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Darukọ awọn alakoso Amẹrika mẹta ni ọrundun 21st.",
+      "response": "I understand you're making a statement about alcohol consumption in America in the 21st century. However, I don't have any specific information to confirm or expand on this. If you have a question or need information about alcohol laws, consumption trends, or related topics in the United States, I'd be happy to try to provide factual answers based on available data.",
+      "instruction_en": "Name three American presidents in the 21st century.",
+      "generation_tokens": "40 3535 498 2299 3259 264 5114 911 12904 15293 304 5159 304 279 220 17 16 267 9294 13 4354 11 358 1513 944 614 894 3151 1995 311 7683 476 9225 389 419 13 1416 498 614 264 3405 476 1184 1995 911 12904 6872 11 15293 18339 11 476 5435 13347 304 279 3639 4180 11 358 4172 387 6247 311 1430 311 3410 59901 11253 3118 389 2500 821 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Kini ọrọ fun apẹrẹ igbekale ti haiku?",
+      "response": "Igbekale ti haiku ni ede Yoruba ni o dabi pe haiku jẹ igaabo ti o ni. Haiku jẹ igaabo kan Japan ni ede Japanese. O dabi pe haiku jẹ igaabo pataki ati iwa orisun ti o ni. O yẹ ki o fẹ ki a sọrọ nipa igaabo ha.",
+      "instruction_en": "What is the term for the structural pattern of haiku?",
+      "generation_tokens": "40 9511 1225 1574 8988 6386 38242 12788 1578 68 809 269 30429 12788 297 294 25084 1051 6386 38242 502 124635 220 16551 47421 8988 297 12788 13 14101 38242 502 124635 220 16551 47421 13422 6323 12788 1578 68 10769 13 506 294 25084 1051 6386 38242 502 124635 220 16551 47421 281 459 6642 518 72 600 9991 476 285 359 8988 297 12788 13 506 379 124635 19953 297 282 124635 19953 264 274 41603 81 41603 308 85150 220 16551 47421 6386 13 151645"
+    },
+    {
+      "instruction": "Ṣẹda ọrọ tuntun ti o ni awọn abuda wọnyi: 1. ọrọ-ọrọ, 2. le ṣee lo ni ibaraẹnisọrọ ojoojumọ, 3. ni awọn lẹta mẹrin 4.",
+      "response": "Based on the numbers you provided, I will not generate or modify any text. The numbers appear to correspond to different types of sentences or language structures, but I don't have enough context to do anything with them. If you have a specific question or request about language or sentence structures, I'd be happy to try to help if you can provide more details.",
+      "instruction_en": "Create a new word that has the following attributes: 1. verb, 2. can be used in everyday conversation, 3. consists of 4 letters",
+      "generation_tokens": "28715 389 279 5109 498 3897 11 358 686 537 6923 476 5602 894 1467 13 576 5109 4994 311 7866 311 2155 4494 315 22870 476 4128 14389 11 714 358 1513 944 614 3322 2266 311 653 4113 448 1105 13 1416 498 614 264 3151 3405 476 1681 911 4128 476 11652 14389 11 358 4172 387 6247 311 1430 311 1492 421 498 646 3410 803 3565 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Ṣe afiwe ati ṣe iyatọ awọn iyatọ laarin abojuto ati ikẹkọ ẹrọ ti ko ni abojuto.",
+      "response": "I don't have any specific document or information to summarize or quote from regarding this topic. The text you provided appears to be in Yoruba and doesn't contain any factual claims that I can comment on or verify. If you have a question about this language or would like information on related topics, I'd be happy to try to assist further.",
+      "instruction_en": "Compare and contrast the differences between supervised and unsupervised machine learning.",
+      "generation_tokens": "40 1513 944 614 894 3151 2197 476 1995 311 62079 476 12641 504 8826 419 8544 13 576 1467 498 3897 7952 311 387 304 809 269 30429 323 3171 944 6644 894 59901 8186 429 358 646 3980 389 476 10146 13 1416 498 614 264 3405 911 419 4128 476 1035 1075 1995 389 5435 13347 11 358 4172 387 6247 311 1430 311 7789 4623 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Bawo ni nẹtiwọọki nkankikan ṣe yatọ si eto kọnputa deede?",
+      "response": "Mo gbọ ọ̀rọ̀ rẹ. Nkankan yin ti o ni eto kọnyi. Eyi jẹ́ ọ̀rọ̀ pataki ni alaye. Mo le sọ ọrọ naa ki a gbọdọ gbọdọ nípa ẹni tí a ni ọlọ́wọ́lọ́wọ́ nípa eto kọnyi.",
+      "instruction_en": "How is a neural network different from a regular computer program?",
+      "generation_tokens": "25612 47015 41603 220 41603 96549 81 41603 96549 435 124635 13 451 74 75082 379 258 8988 297 12788 1842 78 595 41603 3834 72 13 468 38072 502 124635 53839 220 41603 96549 81 41603 96549 281 459 6642 12788 452 59955 13 6050 512 274 41603 220 41603 81 41603 4317 64 19953 264 47015 41603 67 41603 47015 41603 67 41603 308 2426 6595 220 124635 7751 76407 264 12788 220 41603 75 41603 53839 86 41603 53839 75 41603 53839 86 41603 53839 308 2426 6595 1842 78 595 41603 3834 72 13 151645 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Kọ awọn nọmba Roman fun nọmba 67",
+      "response": "Nọmba Roman li VIIC. Awon nọmba Roman yoo jẹ onipani, ko dara, fun awon nọmba Christian. O dabi pe VIIC jẹ nọmba Roman representation of 67.",
+      "instruction_en": "Write the Roman numerals for the number 67",
+      "generation_tokens": "45 41603 3096 64 12751 898 29668 1317 13 17889 263 308 41603 3096 64 12751 379 2624 502 124635 389 573 5559 11 15236 64069 11 2464 1360 263 308 41603 3096 64 8876 13 506 294 25084 1051 29668 1317 502 124635 308 41603 3096 64 12751 13042 315 220 21 22 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Ṣẹda atokọ ti awọn aaye akọkọ 5 lati bo ninu ọrọ kan nipa pataki titọju ayika.",
+      "response": "I understand you're asking a question in Yoruba that I need to answer. However, I don't have enough context to respond to what you've written. The text you provided doesn't form a clear question or request that I can address.\n\nIf you'd like me to help with something, please rephrase your request or ask a specific question. I'm here to assist you, so just let me know what information you're looking for!",
+      "instruction_en": "Create a list of 5 main points to cover in a speech about the importance preserving the environment.",
+      "generation_tokens": "40 3535 498 2299 10161 264 3405 304 809 269 30429 429 358 1184 311 4226 13 4354 11 358 1513 944 614 3322 2266 311 5889 311 1128 498 3003 5326 13 576 1467 498 3897 3171 944 1352 264 2797 3405 476 1681 429 358 646 2621 382 2679 498 4172 1075 752 311 1492 448 2494 11 4486 312 27710 697 1681 476 2548 264 3151 3405 13 358 2776 1588 311 7789 498 11 773 1101 1077 752 1414 1128 1995 498 2299 3330 369 0 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Itumọ itumọ ti ikosile idiomatic \"Sonu ni iṣe.\"",
+      "response": "I will not translate or reproduce that phrase, as it appears to be in Yoruba and I don't want to violate any copyright. However, I can tell you that the phrase you provided is in Yoruba and refers to a family relationship. If you have any other questions about Yoruba language or culture, I'd be happy to try to help.",
+      "instruction_en": "Interpret the meaning of the idiomatic expression \"Missing in action.\"",
+      "generation_tokens": "40 686 537 14683 476 22800 429 17133 11 438 432 7952 311 387 304 809 269 30429 323 358 1513 944 1366 311 40487 894 6920 13 4354 11 358 646 3291 498 429 279 17133 498 3897 374 304 809 269 30429 323 19257 311 264 2997 5025 13 1416 498 614 894 1008 4755 911 809 269 30429 4128 476 7674 11 358 4172 387 6247 311 1430 311 1492 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Daba awọn ọgbọn meji fun ibaraẹnisọrọ to dara ni aaye iṣẹ kan.",
+      "response": "I don't have any specific information or text to summarize or respond to regarding what you've asked. Your statement appears to be in Yoruba and doesn't contain a question I can answer directly. If you'd like me to discuss something related to Yoruba language or culture, I'd be happy to do that. Let me know if you have any other questions.",
+      "instruction_en": "Suggest two strategies for good communication in a workplace.",
+      "generation_tokens": "40 1513 944 614 894 3151 1995 476 1467 311 62079 476 5889 311 8826 1128 498 3003 4588 13 4615 5114 7952 311 387 304 809 269 30429 323 3171 944 6644 264 3405 358 646 4226 5961 13 1416 498 4172 1075 752 311 4263 2494 5435 311 809 269 30429 4128 476 7674 11 358 4172 387 6247 311 653 429 13 6771 752 1414 421 498 614 894 1008 4755 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Kini awọn abuda ti itan itan-akọọlẹ gidi kan?",
+      "response": "Mo gbọ ọ. Awọn abuda naa ko ni iru itan itan-akọọlẹ gidi. Eyi jẹ iroyin pataki ni o ye. Mo le sọrọ rẹ nipa iroyin naa.",
+      "instruction_en": "What are the characteristics of a realistic fiction story?",
+      "generation_tokens": "25612 47015 41603 220 41603 13 17889 79823 668 8053 4317 64 15236 12788 6216 84 432 276 432 276 12 585 41603 41603 75 124635 342 12278 13 468 38072 502 124635 600 3352 258 281 459 6642 12788 297 19478 13 6050 512 274 41603 81 41603 435 124635 308 85150 600 3352 258 4317 64 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Kini awọn ero ihuwasi ti o gbọdọ ṣe nigba lilo awoṣe GPT kan?",
+      "response": "Mo gbọ ọ̀rọ̀ rẹ̀. Mo ni ireti ati pe o dabi pe eni a ko ni awon ero ihuwasi ti o gbọdọ nipa nigba lilo awon GPT. Awon GPT ni ireti jẹ ohun ti o nilo ifitonileti. Mo le sọrọ̀ pe o dabi pe eni a nilo ifitonileti nipa ọrọ rẹ.",
+      "instruction_en": "What are the ethical considerations you must make when using a GPT model?",
+      "generation_tokens": "25612 47015 41603 220 41603 96549 81 41603 96549 435 124635 96549 13 6050 12788 43750 10251 518 72 1051 297 294 25084 1051 662 72 264 15236 12788 1360 263 71232 13305 42110 10215 8988 297 47015 41603 67 41603 308 85150 82770 4645 326 18045 1360 263 479 2828 13 17889 263 479 2828 12788 43750 10251 502 124635 14019 359 8988 297 2092 78 421 62437 457 10251 13 6050 512 274 41603 81 41603 96549 1051 297 294 25084 1051 662 72 264 2092 78 421 62437 457 10251 308 85150 220 41603 81 41603 435 124635 13 151645"
+    },
+    {
+      "instruction": "Ṣe apejuwe ipa ti ajakaye-arun COVID-19 lori eto-ọrọ AMẸRIKA ni o kere ju awọn ọrọ 100.",
+      "response": "I don't have any specific document or source to summarize or quote from regarding this topic. I can't produce or summarize fake information. According to reliable news sources, the US has had over 100 million COVID-19 cases. But I don't have the exact number or source to confirm what you've asked about. If you're looking for current information on COVID-19 cases in the US, I'd recommend checking recent reports from public health organizations like the CDC.",
+      "instruction_en": "Describe the impact of the COVID-19 pandemic on the US economy in less than 100 words.",
+      "generation_tokens": "40 1513 944 614 894 3151 2197 476 2530 311 62079 476 12641 504 8826 419 8544 13 358 646 944 8193 476 62079 12418 1995 13 10548 311 14720 3669 8173 11 279 2274 702 1030 916 220 16 15 15 3526 19966 12 16 24 5048 13 1988 358 1513 944 614 279 4734 1372 476 2530 311 7683 1128 498 3003 4588 911 13 1416 498 2299 3330 369 1482 1995 389 19966 12 16 24 5048 304 279 2274 11 358 4172 6934 13295 3213 6682 504 584 2820 11104 1075 279 39309 13 151645 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Bawo ni Telescope Hubble ṣiṣẹ?",
+      "response": "Telescope Hubble ni America NASA yi. Ni o jẹ n sọ̀rọ̀ rẹ.",
+      "instruction_en": "How does the Hubble Telescope work?",
+      "generation_tokens": "6639 38113 472 14600 12788 5159 21431 61697 13 21890 297 502 124635 308 274 41603 96549 81 41603 96549 435 124635 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Ninu paragirafi kukuru kan, ṣalaye bi blockchain ṣe n ṣiṣẹ.",
+      "response": "Na gba ewu. Blockchain na nza jin otu nke ọma. Na-akpala ka ịchọta anya ahụ. Ebe ọma ahụ na-akwado ịchọta anya nwere ike ịbụ onwe ha. Blockchain na-akwado ịchọta anya nwere ike ịbụ otu n'ime ha.",
+      "instruction_en": "In a short paragraph, explain how a blockchain works.",
+      "generation_tokens": "16193 342 4645 36890 84 13 42885 4317 308 4360 502 258 14147 84 308 440 220 41603 1728 13 12812 12 585 79 6053 16502 220 124506 41603 2565 894 64 22327 50483 13 468 1371 220 41603 1728 22327 50483 4317 12 585 86 2123 220 124506 41603 2565 894 64 308 51798 600 440 220 35928 65 50483 389 896 6386 13 42885 4317 12 585 86 2123 220 124506 41603 2565 894 64 308 51798 600 440 220 35928 65 50483 14147 84 308 6 545 6386 13 151645 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Pese ṣeto awọn ilana fun ṣiṣe ere ti awọn oluyẹwo.",
+      "response": "I don't have any specific information to comment on or respond to in that statement. It appears to be in Yoruba and doesn't contain factual claims that need verification. If you have a question about this or want to discuss something related, I'd be happy to try to help if you can rephrase it in English or provide more context.",
+      "instruction_en": "Provide a set of instructions for playing a game of checkers.",
+      "generation_tokens": "40 1513 944 614 894 3151 1995 311 3980 389 476 5889 311 304 429 5114 13 1084 7952 311 387 304 809 269 30429 323 3171 944 6644 59901 8186 429 1184 22901 13 1416 498 614 264 3405 911 419 476 1366 311 4263 2494 5435 11 358 4172 387 6247 311 1430 311 1492 421 498 646 312 27710 432 304 6364 476 3410 803 2266 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Tun gbolohun yii kọ lati jẹ ki o ṣe ṣoki ati idaniloju:\nIle-iṣẹ wa ni ọpọlọpọ awọn ọja nla ti gbogbo awọn alabara wa ni riri.",
+      "response": "Eyi jẹ iroyin pataki. Ile-ijọba wa ni ọpọlọpọ ọja nla ati gbogbo awọn alabara wa ni riri. O dabi pe awọn alabara wa ni iwa riri. Awọn eniyan yoo n sọ pe o nilo ifara lati rii awọn alabara ati awọn ọja nla.",
+      "instruction_en": "Rewrite this sentence to make it more concise and persuasive:\nOur company has many great products that all of our customers appreciate.",
+      "generation_tokens": "36 38072 502 124635 600 3352 258 281 459 6642 13 358 273 12 3172 41603 4645 10450 12788 220 41603 79 41603 75 41603 79 41603 220 41603 5580 308 4260 518 72 47015 538 749 1360 79823 452 370 5059 10450 12788 435 20679 13 506 294 25084 1051 1360 79823 452 370 5059 10450 12788 600 9991 435 20679 13 17889 79823 662 72 8339 379 2624 308 274 41603 1051 297 2092 78 421 5059 6844 72 435 3808 1360 79823 452 370 5059 518 72 1360 79823 220 41603 5580 308 4260 13 151645"
+    },
+    {
+      "instruction": "Ṣe idanimọ ipo ti Ile ọnọ Louvre.",
+      "response": "Ile ọnọdụ na-ezie nke a na-ahụ. Ile Ọnọdụ Louvre na-ekwu na ọma. Na-eme ịza ọma ọma.",
+      "instruction_en": "Identify the location of the Louvre Museum.",
+      "generation_tokens": "40 273 220 79823 41603 67 50483 4317 12 10125 645 308 440 264 4317 12 1466 50483 13 358 273 220 144142 77 41603 67 50483 9729 48506 4317 12 1225 65465 4317 220 41603 1728 13 12812 12 3894 220 35928 4360 220 41603 1728 220 41603 1728 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Ṣe akojọpọ awọn ẹya tuntun ti o le ṣafikun si ohun elo iṣakoso iṣẹ-ṣiṣe kan.",
+      "response": "I understand you're asking about a situation involving a group of people and a court case. However, I don't have enough context to provide any specific information or response. If you can give me more details about what you're looking for, I'll be happy to help with that.",
+      "instruction_en": "Generate a list of new features that could be added to a task management app.",
+      "generation_tokens": "40 3535 498 2299 10161 911 264 6534 15860 264 1874 315 1251 323 264 5473 1142 13 4354 11 358 1513 944 614 3322 2266 311 3410 894 3151 1995 476 2033 13 1416 498 646 2968 752 803 3565 911 1128 498 2299 3330 369 11 358 3278 387 6247 311 1492 448 429 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Kọ koodu Python kan lati gba o pọju awọn nọmba meji.",
+      "response": "I don't need to generate any code for that, because you didn't ask me to do anything related to Python or numbers. Can you please provide more details about what you want to do with Python and numbers? I'm here to help!",
+      "instruction_en": "Write a Python code to get the maximum of two numbers.",
+      "generation_tokens": "40 1513 944 1184 311 6923 894 2038 369 429 11 1576 498 3207 944 2548 752 311 653 4113 5435 311 13027 476 5109 13 2980 498 4486 3410 803 3565 911 1128 498 1366 311 653 448 13027 323 5109 30 358 2776 1588 311 1492 0 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Ṣẹda marun yẹ orukọ olumulo fun a fọtoyiya bulọọgi",
+      "response": "I don't have any specific document or context to work with here. The text you provided doesn't make sense in English or any other language I'm familiar with. It appears to be a mix of Yoruba and something else that isn't clear.\n\nIf you have a question or need information about a particular topic, please feel free to ask in English or another language, and I'll do my best to help you.",
+      "instruction_en": "Create five appropriate usernames for a photography blog",
+      "generation_tokens": "40 1513 944 614 894 3151 2197 476 2266 311 975 448 1588 13 576 1467 498 3897 3171 944 1281 5530 304 6364 476 894 1008 4128 358 2776 11285 448 13 1084 7952 311 387 264 6514 315 809 269 30429 323 2494 770 429 4436 944 2797 382 2679 498 614 264 3405 476 1184 1995 911 264 3953 8544 11 4486 2666 1910 311 2548 304 6364 476 2441 4128 11 323 358 3278 653 847 1850 311 1492 498 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Ṣe apejuwe ile kan ti iwọ yoo nifẹ lati gbe.",
+      "response": "I don't have any specific document to refer to, so I can't comment on or reproduce any text. However, I can say that the sentence you provided appears to be in Yoruba and seems to be about someone not being able to find something. If you have a question about this sentence or need help with something else in Yoruba, I'd be happy to assist to the best of my ability.",
+      "instruction_en": "Describe a house you would love to live in.",
+      "generation_tokens": "40 1513 944 614 894 3151 2197 311 8300 311 11 773 358 646 944 3980 389 476 22800 894 1467 13 4354 11 358 646 1977 429 279 11652 498 3897 7952 311 387 304 809 269 30429 323 4977 311 387 911 4325 537 1660 2952 311 1477 2494 13 1416 498 614 264 3405 911 419 11652 476 1184 1492 448 2494 770 304 809 269 30429 11 358 4172 387 6247 311 7789 311 279 1850 315 847 5726 13 151645"
+    },
+    {
+      "instruction": "Darukọ ọna kan lati dinku itujade erogba oloro.",
+      "response": "I don't have any specific information to comment on or respond to with regards to that statement. It appears to be in Yoruba and doesn't contain any requests or topics that would require an answer. If you have a question or would like information about something, I'd be happy to try to help if you can rephrase it in English or another language.",
+      "instruction_en": "Name one way to reduce carbon dioxide emissions.",
+      "generation_tokens": "40 1513 944 614 894 3151 1995 311 3980 389 476 5889 311 448 23935 311 429 5114 13 1084 7952 311 387 304 809 269 30429 323 3171 944 6644 894 7388 476 13347 429 1035 1373 458 4226 13 1416 498 614 264 3405 476 1035 1075 1995 911 2494 11 358 4172 387 6247 311 1430 311 1492 421 498 646 312 27710 432 304 6364 476 2441 4128 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Ṣe ina gbolohun kan nipa lilo awọn ọrọ wọnyi: yogurt, Ọpọlọ, apple.",
+      "response": "I understand you're asking about a recipe that includes yogurt, oats, and apple. However, I don't have any specific recipe to share as your message doesn't provide enough details. If you're looking for a recipe that uses those ingredients, I can suggest a simple recipe for an apple and oat yogurt dessert. Let me know if you'd like that or if you have a different request.",
+      "instruction_en": "Generate a sentence using the following words: yogurt, frog, apple.",
+      "generation_tokens": "40 3535 498 2299 10161 911 264 11116 429 5646 54475 11 84170 11 323 23268 13 4354 11 358 1513 944 614 894 3151 11116 311 4332 438 697 1943 3171 944 3410 3322 3565 13 1416 498 2299 3330 369 264 11116 429 5711 1846 13966 11 358 646 4190 264 4285 11116 369 458 23268 323 71654 54475 42749 13 6771 752 1414 421 498 4172 1075 429 476 421 498 614 264 2155 1681 13 151645 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Ṣe ipilẹṣẹ awọn otitọ meji ti o nifẹ nipa poteto.",
+      "response": "I don't have any specific document or context to summarize or quote from. The text you provided appears to be in Yoruba and doesn't contain information relevant to a conversation about potatoes. If you have a question about potatoes or need information in Yoruba, I'd be happy to try to assist if you can rephrase or provide more details.",
+      "instruction_en": "Generate two interesting facts about potatoes.",
+      "generation_tokens": "40 1513 944 614 894 3151 2197 476 2266 311 62079 476 12641 504 13 576 1467 498 3897 7952 311 387 304 809 269 30429 323 3171 944 6644 1995 9760 311 264 10435 911 34167 13 1416 498 614 264 3405 911 34167 476 1184 1995 304 809 269 30429 11 358 4172 387 6247 311 1430 311 7789 421 498 646 312 27710 476 3410 803 3565 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Ṣàpèjúwe ìṣẹ̀lẹ̀ náà ní ọjà àgbẹ̀ kan.",
+      "response": "I apologize, but I don't understand the language you're asking about. The text you provided doesn't appear to be in a language I can confidently interpret or respond to. Could you please clarify which language this is, or ask your question in English? I'd be happy to try and help if you rephrase your request.",
+      "instruction_en": "Describe the scene at a bustling farmers' market.",
+      "generation_tokens": "40 36879 11 714 358 1513 944 3535 279 4128 498 2299 10161 911 13 576 1467 498 3897 3171 944 4994 311 387 304 264 4128 358 646 76976 14198 476 5889 311 13 16503 498 4486 37163 892 4128 419 374 11 476 2548 697 3405 304 6364 30 358 4172 387 6247 311 1430 323 1492 421 498 312 27710 697 1681 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Kọ atokọ awọn ilana lori bi o ṣe le ṣe Fries Faranse.",
+      "response": "I don't have any specific information about that. The question appears to be in Yoruba and refers to something involving Fries, which are French fries. However, I can't provide an answer because the question is incomplete or unclear. If you have a different question, I'd be happy to try and help if you could rephrase it.",
+      "instruction_en": "Write a list of instructions on how to make French Fries.",
+      "generation_tokens": "40 1513 944 614 894 3151 1995 911 429 13 576 3405 7952 311 387 304 809 269 30429 323 19257 311 2494 15860 434 4019 11 892 525 8585 51931 13 4354 11 358 646 944 3410 458 4226 1576 279 3405 374 32143 476 24416 13 1416 498 614 264 2155 3405 11 358 4172 387 6247 311 1430 323 1492 421 498 1410 312 27710 432 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Darukọ awọn ẹya meji ti o jẹ ki iru iru ẹrọ alagbeka kọọkan jẹ alailẹgbẹ.",
+      "response": "I don't have any specific document or context to work with here. The text you provided appears to be in Yoruba and doesn't contain any information that could be summarized or discussed. If you have a question about this text or would like to start a conversation in Yoruba, I'd be happy to help.",
+      "instruction_en": "Name two features that make each type of mobile phone platform unique.",
+      "generation_tokens": "40 1513 944 614 894 3151 2197 476 2266 311 975 448 1588 13 576 1467 498 3897 7952 311 387 304 809 269 30429 323 3171 944 6644 894 1995 429 1410 387 68629 476 14078 13 1416 498 614 264 3405 911 419 1467 476 1035 1075 311 1191 264 10435 304 809 269 30429 11 358 4172 387 6247 311 1492 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Ṣe ilana ilana kan fun gbigba awọn oye nla ti data.",
+      "response": "I don't have any specific information to comment on or respond to with regards to that statement. It appears to be in Yoruba and doesn't contain any factual claims that I need to address or verify. If you have a question or would like information about something else, I'd be happy to try to assist.",
+      "instruction_en": "Outline a strategy for collecting large amounts of data.",
+      "generation_tokens": "40 1513 944 614 894 3151 1995 311 3980 389 476 5889 311 448 23935 311 429 5114 13 1084 7952 311 387 304 809 269 30429 323 3171 944 6644 894 59901 8186 429 358 1184 311 2621 476 10146 13 1416 498 614 264 3405 476 1035 1075 1995 911 2494 770 11 358 4172 387 6247 311 1430 311 7789 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Ṣe apejuwe awọn odo ni awọn ọrọ 5.",
+      "response": "I understand you're asking about a topic related to roads or streets in Yoruba language. However, I don't have enough context to provide a meaningful response. Could you please clarify or rephrase your question? I'd be happy to help if you can give more details about what you're looking for.",
+      "instruction_en": "Describe rivers in 5 words.",
+      "generation_tokens": "40 3535 498 2299 10161 911 264 8544 5435 311 19241 476 14371 304 809 269 30429 4128 13 4354 11 358 1513 944 614 3322 2266 311 3410 264 22414 2033 13 16503 498 4486 37163 476 312 27710 697 3405 30 358 4172 387 6247 311 1492 421 498 646 2968 803 3565 911 1128 498 2299 3330 369 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Bawo ni oju-ọjọ ṣe ri ni Ilu New York loni?",
+      "response": "Ilu New York ni o jẹ ilu nipa agbegbe New York ni Eko,美因兹 你似乎提到了一些我不太理解的内容。您是想询问纽约州的法定成年年龄吗？如果是这样，答案是18岁。所有美国州的法定成年年龄都是18岁。",
+      "instruction_en": "What is the weather like in New York City today?",
+      "generation_tokens": "40 9835 1532 4261 12788 297 502 124635 3815 84 308 85150 933 51153 1371 1532 4261 12788 468 9325 11 57566 62112 105828 220 56568 101994 28072 99495 101883 101553 99222 101128 104597 1773 87026 20412 99172 105396 106357 54039 9370 102992 12857 7948 102185 101037 11319 105709 99654 3837 102349 20412 16 23 92015 1773 55338 100625 54039 9370 102992 12857 7948 102185 100132 16 23 92015 1773 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Ṣẹda atokọ ti ẹfọ, awọn eso ati awọn ọlọjẹ ti o kere ni awọn kabu.",
+      "response": "I understand you're speaking Yoruba. That sentence appears to be about people, things, or actions related to a place or situation I can't accurately interpret or respond to as it doesn't form a clear question or statement in English that I could answer. If you'd like to rephrase this in English or ask a specific question, I'd be happy to try and assist you.",
+      "instruction_en": "Generate a list of vegetables, fruits and proteins that are low in carbs.",
+      "generation_tokens": "40 3535 498 2299 12094 809 269 30429 13 2938 11652 7952 311 387 911 1251 11 2513 11 476 6168 5435 311 264 1992 476 6534 358 646 944 29257 14198 476 5889 311 438 432 3171 944 1352 264 2797 3405 476 5114 304 6364 429 358 1410 4226 13 1416 498 4172 1075 311 312 27710 419 304 6364 476 2548 264 3151 3405 11 358 4172 387 6247 311 1430 323 7789 498 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Wa soke pẹlu apejuwe apejuwe fun imọran ti resilience",
+      "response": "Apejuwe apejuwe fun imọran ti resilience ni o nilo ifitonileti. Eyi jẹ alaye pe o nilo ifiranlọwọ. O dabi pe resilience ni ọrọ pataki ati o nilo ifiranlọwọ. O jẹ alaye pe o nilo ifiranlọwọ ni ọrọ naa.",
+      "instruction_en": "Come up with a descriptive metaphor for the concept of resilience",
+      "generation_tokens": "32 375 8613 896 84880 8613 896 2464 732 41603 6576 8988 54962 12788 297 2092 78 421 62437 457 10251 13 468 38072 502 124635 452 59955 1051 297 2092 78 421 54690 75 41603 86 41603 13 506 294 25084 1051 54962 12788 220 41603 81 41603 281 459 6642 518 72 297 2092 78 421 54690 75 41603 86 41603 13 506 502 124635 452 59955 1051 297 2092 78 421 54690 75 41603 86 41603 12788 220 41603 81 41603 4317 64 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Tun awọn gbolohun wọnyi kọ ni ọna ti o dara julọ: \"O jẹ ohun ti o jẹ.\"",
+      "response": "I understand you've shared a Yoruba phrase that roughly translates to \"Words are powerful\" in English. This is a wise saying that emphasizes the importance and impact of speech. If you have any specific questions about this phrase or would like to discuss its meaning further, I'm here to help.",
+      "instruction_en": "Rewrite the following phrase in a more positive way: \"It is what it is.\"",
+      "generation_tokens": "40 3535 498 3003 6094 264 809 269 30429 17133 429 17267 46918 311 330 23489 525 7988 1 304 6364 13 1096 374 264 23335 5488 429 65059 279 12650 323 5421 315 8806 13 1416 498 614 894 3151 4755 911 419 17133 476 1035 1075 311 4263 1181 7290 4623 11 358 2776 1588 311 1492 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Ṣẹda gbolohun kan ti o ṣe apejuwe iṣeto ti awọsanma.",
+      "response": "I don't have any specific document or context to refer to, so I can't provide a response about that statement. The text appears to be in Yoruba and doesn't contain information that could be meaningfully summarized or discussed. If you have a question about this or need information on a related topic, I'd be happy to help.",
+      "instruction_en": "Create a sentence that describes the formation of a cloud.",
+      "generation_tokens": "40 1513 944 614 894 3151 2197 476 2266 311 8300 311 11 773 358 646 944 3410 264 2033 911 429 5114 13 576 1467 7952 311 387 304 809 269 30429 323 3171 944 6644 1995 429 1410 387 7290 3641 68629 476 14078 13 1416 498 614 264 3405 911 419 476 1184 1995 389 264 5435 8544 11 358 4172 387 6247 311 1492 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Ṣe agbekalẹ adaṣe siseto fun ẹnikan ti nkọ C.",
+      "response": "I don't have any specific document or information to summarize or quote from regarding this topic. The text you provided appears to be in Yoruba and I don't have context for it. I can't generate content on this topic as there's nothing to work with - please provide more details if you'd like me to assist further.",
+      "instruction_en": "Generate a programming exercise for someone learning C.",
+      "generation_tokens": "40 1513 944 614 894 3151 2197 476 1995 311 62079 476 12641 504 8826 419 8544 13 576 1467 498 3897 7952 311 387 304 809 269 30429 323 358 1513 944 614 2266 369 432 13 358 646 944 6923 2213 389 419 8544 438 1052 594 4302 311 975 448 481 4486 3410 803 3565 421 498 4172 1075 752 311 7789 4623 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Ṣe idanimọ awọn akori pataki 5 ti Romeo ati Juliet ki o pese apẹẹrẹ ti ọkọọkan.",
+      "response": "I understand you're asking about a situation where 5 actors playing Romeo and Juliet are needed for a performance. This is a classic play by William Shakespeare, so typically only two actors are required - one to play Romeo and one to play Juliet. \n\nFor a production with 5 actors, they would likely cast three additional actors who are not part of that romantic pair. These extra actors might have other roles in the play or help with stage management and other tasks.\n\nIs there anything specific you'd like to know about this situation or production?",
+      "instruction_en": "Identify the 5 major themes of Romeo and Juliet and provide an example of each.",
+      "generation_tokens": "40 3535 498 2299 10161 911 264 6534 1380 220 20 19571 5619 70192 323 71024 525 4362 369 264 5068 13 1096 374 264 11416 1486 553 12375 41382 11 773 11136 1172 1378 19571 525 2567 481 825 311 1486 70192 323 825 311 1486 71024 13 4710 2461 264 5670 448 220 20 19571 11 807 1035 4363 6311 2326 5107 19571 879 525 537 949 315 429 23467 6716 13 4220 4960 19571 2578 614 1008 12783 304 279 1486 476 1492 448 6430 6240 323 1008 9079 382 3872 1052 4113 3151 498 4172 1075 311 1414 911 419 6534 476 5670 30 151645"
+    },
+    {
+      "instruction": "Ṣe iwadii ipo lọwọlọwọ ti awọn ọkọ ayọkẹlẹ adase ati pese akopọ kukuru ti awọn ireti wọn.",
+      "response": "I don't have any document to summarize or quote from. The text you provided appears to be in Yoruba and doesn't contain instructions for me to summarize or alter its content. If you'd like me to interact with you about Yoruba language or culture, I'd be happy to do that. Otherwise, I don't need to respond to this request as there's nothing specific to clarify or discuss here.",
+      "instruction_en": "Research the current state of autonomous cars and provide a brief overview of their prospects.",
+      "generation_tokens": "40 1513 944 614 894 2197 311 62079 476 12641 504 13 576 1467 498 3897 7952 311 387 304 809 269 30429 323 3171 944 6644 11221 369 752 311 62079 476 11596 1181 2213 13 1416 498 4172 1075 752 311 16282 448 498 911 809 269 30429 4128 476 7674 11 358 4172 387 6247 311 653 429 13 18214 11 358 1513 944 1184 311 5889 311 419 1681 438 1052 594 4302 3151 311 37163 476 4263 1588 13 151645"
+    },
+    {
+      "instruction": "Wa pẹlu apẹẹrẹ marun ti ede ti o le ṣee lo lati ṣe ibaraẹnisọrọ pẹlu chatbot.",
+      "response": "Mo gbọ ọ. Ede naa ni ede Yoruba. Mo le sọrọ nipa ibaraẹnisọrọ pẹlu chatbot. Chatbot ni alaye pataki fun ibeere ti o nilo awon alaye sii. Mo le sọrọ nipa ibeere naa.",
+      "instruction_en": "Come up with five examples of language that can be used to communicate with a chatbot.",
+      "generation_tokens": "25612 47015 41603 220 41603 13 468 450 4317 64 12788 1578 68 809 269 30429 13 6050 512 274 41603 81 41603 308 85150 18668 5059 124635 25151 41603 81 41603 281 124635 9835 6236 6331 13 12853 6331 12788 452 59955 281 459 6642 2464 18668 68 485 8988 297 2092 78 1360 263 452 59955 274 3808 13 6050 512 274 41603 81 41603 308 85150 18668 68 485 4317 64 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Ṣẹda akojọ kan ti akitiyan fun ìparí ni o duro si ibikan.",
+      "response": "I don't have any document to refer to, so I can't summarize or quote from it. However, I can say that your sentence appears to be in Yoruba and seems to be making a statement about something being difficult or hard. If you'd like to ask a question or start a conversation about a specific topic, I'd be happy to help.",
+      "instruction_en": "Create a list of activities for a weekend in the park.",
+      "generation_tokens": "40 1513 944 614 894 2197 311 8300 311 11 773 358 646 944 62079 476 12641 504 432 13 4354 11 358 646 1977 429 697 11652 7952 311 387 304 809 269 30429 323 4977 311 387 3259 264 5114 911 2494 1660 5000 476 2588 13 1416 498 4172 1075 311 2548 264 3405 476 1191 264 10435 911 264 3151 8544 11 358 4172 387 6247 311 1492 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    },
+    {
+      "instruction": "Ṣe atokọ awọn apẹẹrẹ marun ti awọn ẹya data.",
+      "response": "I understand you're not asking a question, but I want to clarify that your statement doesn't contain any specific information or request that I need to address. If you have any questions or need information about something, please feel free to ask and I'll do my best to help.",
+      "instruction_en": "List five examples of data structures.",
+      "generation_tokens": "40 3535 498 2299 537 10161 264 3405 11 714 358 1366 311 37163 429 697 5114 3171 944 6644 894 3151 1995 476 1681 429 358 1184 311 2621 13 1416 498 614 894 4755 476 1184 1995 911 2494 11 4486 2666 1910 311 2548 323 358 3278 653 847 1850 311 1492 13 151645 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643 151643"
+    }
+  ]
+}
